@@ -1,0 +1,25 @@
+{
+  "name": "awesome-librus",
+  "version": "1.0.0",
+  "description": "Improves the appearance of Librus",
+  "main": "manifest.json",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kcpru/awesome-librus.git"
+  },
+  "keywords": [
+    "librus",
+    "chrome",
+    "extenstion",
+    "awesome"
+  ],
+  "author": "Kacper Ślusarczyk",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kcpru/awesome-librus/issues"
+  },
+  "homepage": "https://github.com/kcpru/awesome-librus#readme"
+}
