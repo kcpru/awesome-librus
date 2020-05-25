@@ -1,59 +1,74 @@
 class AwesomeLibrus {
-  constructor() {
+  constructor({ theme }) {
+    this.theme = theme;
     this.body = $("body");
+
+    this.themeName = localStorage.getItem("theme")
+      ? localStorage.getItem("theme")
+      : "light";
 
     this.appendSelect();
 
-    this.toggle = $("#toggle-mode");
-    this.mode = localStorage.getItem("mode");
-
-    this.toggleMode();
+    this.toggle = $("#toggle-theme");
+    this.toggleTheme();
   }
 
-  toggleMode() {
-    if (!localStorage.getItem("mode"))
-      this.toggleClass("light");
-    if (localStorage.getItem("mode"))
-      this.toggleClass(localStorage.getItem("mode"));
+  toggleTheme() {
+    this.themeName = localStorage.getItem("theme")
+      ? localStorage.getItem("theme")
+      : "light";
+
+    this.setClass(this.themeName);
 
     this.toggle.change(() => {
-      switch (this.mode) {
-        case "light":
-          this.toggleClass("dark");
-          break;
-        case "dark":
-          this.toggleClass("light");
-          break;
-        default:
-          console.log("Nic nie ma");
-      }
+      this.setClass(this.toggle.find(":selected").val());
     });
   }
 
-  toggleClass(className) {
-    this.body.removeClass(this.mode).addClass(className);
-    this.mode = className;
-    localStorage.setItem("mode", this.mode);
+  setClass(className) {
+    this.body.removeClass().addClass(className);
+    this.themeName = className;
+    localStorage.setItem("theme", this.themeName);
   }
 
-  // changeStyle() {
-  //   this.toggle.change(() => {
-  //     this.toggleMode();
-  //   });
-  // }
-
   appendSelect() {
-    $("#user-section").append(
-      `<div id="toggle-mode">
-        <label for="mode">Motyw</label>
+    const options = this.theme.map(
+      ({ name, value }) =>
+        `<option value="${value}" ${
+          value === this.themeName && `selected`
+        }>${name}</option>`
+    );
 
-        <select name="mode" id="mode">
-          <option value="light">Light</option>
-          <option value="dark">Dark</option>
+    $("#user-section").append(
+      `<div id="toggle-theme">
+        <label for="theme">Motyw</label>
+        <select name="theme" id="theme">
+          ${options}
         </select>
       </div>`
     );
   }
 }
 
-const al = new AwesomeLibrus();
+const al = new AwesomeLibrus({
+  theme: [
+    { name: "Light", value: "light" },
+    { name: "Dark", value: "dark" },
+    { name: "Dark blue", value: "dark-blue" },
+    { name: "Amoled", value: "amoled" },
+  ],
+});
+
+// Routes
+const routes = [
+  { element: $("#icon-oceny"), path: /\/przegladaj_oceny.*/ },
+  { element: $("#icon-nb"), path: /\/przegladaj_nb.*/ },
+  { element: $("#icon-wiadomosci"), path: /\/wiadomosci/ },
+  { element: $("#icon-ogloszenia"), path: /\/ogloszenia/ },
+  { element: $("#icon-terminarz"), path: /\/terminarz/ },
+  { element: $("#icon-zadania"), path: /\/moje_zadania/ },
+];
+
+routes.forEach(({ element, path }) => {
+  if (location.pathname.match(path)?.input) element.addClass("active-link");
+});
