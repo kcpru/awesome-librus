@@ -1,4 +1,4 @@
-# Chrome Extension Awesome Liburs
+# Chrome Extension Awesome Librus
 
 ## Instructions
 
