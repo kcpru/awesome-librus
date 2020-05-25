@@ -9,11 +9,33 @@
   --accent-2: #442643;
   --accent-3: #f5a817; }
 
-.dark {
+.dark-blue {
   --primary-color: #f3f4f6;
   --primary-background-color: #1a242d;
   --primary-text-color: #f3f4f6;
   --secondary-background-color: #0e1318;
+  --primary-button-background-color: #1a242d;
+  --primary-button-text-color: #f3f4f6;
+  --accent-1: #ea2a56;
+  --accent-2: #442643;
+  --accent-3: #f5a817; }
+
+.dark {
+  --primary-color: #f7f7f7;
+  --primary-background-color: #222222;
+  --primary-text-color: #f7f7f7;
+  --secondary-background-color: #161616;
+  --primary-button-background-color: #222222;
+  --primary-button-text-color: #f7f7f7;
+  --accent-1: #ea2a56;
+  --accent-2: #442643;
+  --accent-3: #f5a817; }
+
+.amoled {
+  --primary-color: #f3f4f6;
+  --primary-background-color: #0e1318;
+  --primary-text-color: #f3f4f6;
+  --secondary-background-color: #000000;
   --primary-button-background-color: #1a242d;
   --primary-button-text-color: #f3f4f6;
   --accent-1: #ea2a56;
@@ -29,11 +51,14 @@ span.button-end,
 span.button-start,
 span.fold-end,
 span.fold-start {
+  display: none;
   text-align: center !important;
   background: none !important; }
-  span.button-end:hover,
+
+span.button-start,
+span.fold-start {
+  display: block; }
   span.button-start:hover,
-  span.fold-end:hover,
   span.fold-start:hover {
     background: var(--accent-1) !important;
     box-shadow: 0 0.2rem 1rem -0.4rem var(--accent-1) !important; }
@@ -93,12 +118,6 @@ table.decorated.stretch tr {
 body {
   background: var(--secondary-background-color) !important; }
 
-#footer hr {
-  display: none; }
-
-#footer #bottom-logo {
-  display: none; }
-
 /* width */
 ::-webkit-scrollbar {
   width: 12px; }
@@ -126,6 +145,7 @@ body {
     display: none !important;
     opacity: 0; }
   #header #main-navigation-container {
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
     background: var(--primary-button-background-color) !important;
     color: var(--primary-button-text-color); }
     #header #main-navigation-container * {
@@ -161,6 +181,9 @@ body {
       margin-top: 6rem !important;
       width: 100%;
       height: auto !important; }
+      #header #top-banner-container #graphic-menu .active-link {
+        background: var(--accent-1) !important;
+        box-shadow: 0 0.2rem 1rem -0.4rem var(--accent-1) !important; }
       #header #top-banner-container #graphic-menu ul {
         display: flex;
         justify-content: center;
@@ -208,14 +231,104 @@ body {
       padding: 0.4rem;
       border-radius: 1rem; }
 
-#toggle-mode {
+#footer hr {
+  display: none; }
+
+#footer #bottom-logo {
+  display: none; }
+
+#toggle-theme {
   padding: 0.9rem 1rem;
   border-radius: 1rem;
   background: var(--primary-background-color);
   display: inline-block; }
 
+.container .fold a.fold-link span.fold-start {
+  padding: 0 1rem !important; }
+
+.container .container-background .container-icon {
+  display: none; }
+
+.container .container-background .decorated.stretch {
+  overflow: hidden;
+  border-radius: 1rem;
+  border: none; }
+  .container .container-background .decorated.stretch td,
+  .container .container-background .decorated.stretch th {
+    background: var(--primary-background-color) !important; }
+  .container .container-background .decorated.stretch > thead {
+    font-weight: bold; }
+    .container .container-background .decorated.stretch > thead span {
+      border: none;
+      background: var(--primary-background-color) !important; }
+  .container .container-background .decorated.stretch table {
+    overflow: hidden;
+    background: var(--secondary-background-color) !important; }
+  .container .container-background .decorated.stretch td[colspan="16"] {
+    background: var(--secondary-background-color) !important; }
+  .container .container-background .decorated.stretch > tbody > tr > td > table {
+    border: 2px solid var(--secondary-background-color) !important; }
+    .container .container-background .decorated.stretch > tbody > tr > td > table table,
+    .container .container-background .decorated.stretch > tbody > tr > td > table tbody,
+    .container .container-background .decorated.stretch > tbody > tr > td > table thead,
+    .container .container-background .decorated.stretch > tbody > tr > td > table td,
+    .container .container-background .decorated.stretch > tbody > tr > td > table th,
+    .container .container-background .decorated.stretch > tbody > tr > td > table tr {
+      border: 2px solid var(--secondary-background-color) !important; }
+  .container .container-background .decorated.stretch .grade-box {
+    color: #333333 !important;
+    padding: 0.3rem;
+    border-radius: 1rem;
+    font-weight: bold;
+    margin: 0.3rem !important; }
+    .container .container-background .decorated.stretch .grade-box a {
+      color: #000000c0 !important; }
+
+.container .container-background .legend {
+  margin-top: 3rem; }
+  .container .container-background .legend h3 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.2rem; }
+  .container .container-background .legend ul li p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8rem; }
+    .container .container-background .legend ul li p span,
+    .container .container-background .legend ul li p strong,
+    .container .container-background .legend ul li p b {
+      display: block;
+      width: auto;
+      padding: 0.5rem;
+      margin: 0.3rem;
+      border-radius: 1rem;
+      background: var(--primary-background-color) !important;
+      font-weight: bold; }
+
+.container .container-background #absenceGraph {
+  margin-top: 6rem; }
+
+div.container.static {
+  margin-top: 3rem; }
+
+.container-background table.filters.decorated.center.small {
+  margin-top: 2rem;
+  overflow: hidden;
+  border-radius: 1rem;
+  border: none; }
+  .container-background table.filters.decorated.center.small td,
+  .container-background table.filters.decorated.center.small th {
+    border: none;
+    background: var(--primary-background-color) !important; }
+  .container-background table.filters.decorated.center.small thead td {
+    font-weight: bold;
+    font-size: 0.9rem; }
+  .container-background table.filters.decorated.center.small tbody th {
+    font-weight: bold; }
+
 .container {
-  background: var(--primary-background-color);
+  background: var(--secondary-background-color);
   box-shadow: none; }
   .container .inside {
     display: none; }
@@ -233,6 +346,8 @@ body {
         background: var(--primary-background-color);
         margin: 1rem 0 0 0;
         border-radius: 1rem 1rem 0 0; }
+        .container .container-background .stretch td.message-folders .message-folders-options a {
+          width: auto !important; }
       .container .container-background .stretch td.message-folders .message-folders {
         border-radius: 0 0 1rem 1rem;
         padding-bottom: 1rem;
@@ -280,15 +395,39 @@ body {
       color: var(--primary-text-color);
       font-size: 1rem; }
     .container .container-background .stretch .pagination ul li {
-      margin: 0 0.8rem; }
+      margin: 0 0.8rem;
+      border: none !important;
+      background: none !important; }
+      .container .container-background .stretch .pagination ul li:hover {
+        border: none !important;
+        background: none !important; }
       .container .container-background .stretch .pagination ul li a, .container .container-background .stretch .pagination ul li.active {
+        font-weight: bold;
         display: block;
         border-radius: 1rem;
         background: var(--primary-button-background-color);
-        color: var(--primary-button-text-color);
-        padding: 0.3rem; }
+        color: var(--primary-button-text-color) !important;
+        padding: 0.3rem;
+        transition: 0.1s; }
+      .container .container-background .stretch .pagination ul li a:hover {
+        background: var(--accent-1) !important;
+        box-shadow: 0 0.2rem 1rem -0.4rem var(--accent-1) !important; }
       .container .container-background .stretch .pagination ul li.active {
         user-select: none;
         cursor: not-allowed;
-        color: var(--primary-button-background-color);
-        background: var(--primary-button-text-color); }
+        color: var(--primary-button-background-color) !important;
+        background: var(--accent-1) !important; }
+
+.container-background .decorated.big.center.printable.margin-top {
+  overflow: hidden;
+  border-radius: 1rem;
+  border: none; }
+  .container-background .decorated.big.center.printable.margin-top td, .container-background .decorated.big.center.printable.margin-top th {
+    border: none;
+    background: var(--primary-background-color) !important; }
+  .container-background .decorated.big.center.printable.margin-top thead td {
+    font-weight: bold;
+    padding: 1rem 0;
+    font-size: 0.9rem; }
+  .container-background .decorated.big.center.printable.margin-top tbody th {
+    font-weight: bold; }

@@ -1,0 +1,23 @@
+.container-background {
+  .decorated.big.center.printable.margin-top {
+    overflow: hidden;
+    border-radius: $border-radius;
+    border: none;
+    td,th {
+      border: none;
+      background: var(--primary-background-color) !important;
+    }
+    thead {
+        td{
+          font-weight: bold;  
+          padding: 1rem 0;
+          font-size: 0.9rem;
+        }
+    }
+    tbody{
+        th{
+            font-weight: bold;
+        }
+    }
+  }
+}

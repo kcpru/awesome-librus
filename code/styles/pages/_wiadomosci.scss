@@ -1,5 +1,5 @@
 .container {
-  background: var(--primary-background-color);
+  background: var(--secondary-background-color);
   box-shadow: none;
 
   .inside {
@@ -22,6 +22,10 @@
           background: var(--primary-background-color);
           margin: 1rem 0 0 0;
           border-radius: $border-radius $border-radius 0 0;
+
+          a {
+            width: auto !important;
+          }
         }
         .message-folders {
           border-radius: 0 0 $border-radius $border-radius;
@@ -102,23 +106,41 @@
         color: var(--primary-text-color);
         font-size: 1rem;
       }
+
       .pagination {
         ul {
           li {
             margin: 0 0.8rem;
+            border: none !important;
+            background: none !important;
+
+            &:hover {
+              border: none !important;
+              background: none !important;
+            }
+
             a,
             &.active {
+              font-weight: bold;
               display: block;
               border-radius: $border-radius;
               background: var(--primary-button-background-color);
-              color: var(--primary-button-text-color);
+              color: var(--primary-button-text-color) !important;
               padding: 0.3rem;
+              transition: $transition-time;
             }
+
+            a {
+              &:hover {
+                @include hoverButton();
+              }
+            }
+
             &.active {
               user-select: none;
               cursor: not-allowed;
-              color: var(--primary-button-background-color);
-              background: var(--primary-button-text-color);
+              color: var(--primary-button-background-color) !important;
+              background: var(--accent-1) !important;
             }
           }
         }

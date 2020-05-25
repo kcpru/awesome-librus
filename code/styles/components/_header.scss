@@ -5,7 +5,7 @@
   }
   background: var(--secondary-background-color) !important;
   #main-navigation-container {
-    // text-transform: uppercase;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
     background: var(--primary-button-background-color) !important;
     color: var(--primary-button-text-color);
     * {
@@ -59,6 +59,10 @@
       margin-top: 6rem !important;
       width: 100%;
       height: auto !important;
+
+      .active-link {
+        @include hoverButton();
+      }
 
       ul {
         display: flex;

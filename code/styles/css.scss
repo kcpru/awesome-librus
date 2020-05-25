@@ -13,12 +13,42 @@
   --accent-3: #f5a817;
 }
 
-.dark {
+.dark-blue {
   --primary-color: #f3f4f6;
   --primary-background-color: #1a242d;
   --primary-text-color: #f3f4f6;
 
   --secondary-background-color: #0e1318;
+
+  --primary-button-background-color: #1a242d;
+  --primary-button-text-color: #f3f4f6;
+
+  --accent-1: #ea2a56;
+  --accent-2: #442643;
+  --accent-3: #f5a817;
+}
+
+.dark {
+  --primary-color: #f7f7f7;
+  --primary-background-color: #222222;
+  --primary-text-color: #f7f7f7;
+
+  --secondary-background-color: #161616;
+
+  --primary-button-background-color: #222222;
+  --primary-button-text-color: #f7f7f7;
+
+  --accent-1: #ea2a56;
+  --accent-2: #442643;
+  --accent-3: #f5a817;
+}
+
+.amoled {
+  --primary-color: #f3f4f6;
+  --primary-background-color: #0e1318;
+  --primary-text-color: #f3f4f6;
+
+  --secondary-background-color: #000000;
 
   --primary-button-background-color: #1a242d;
   --primary-button-text-color: #f3f4f6;
@@ -50,9 +80,14 @@ span.button-end,
 span.button-start,
 span.fold-end,
 span.fold-start {
+  display: none;
   text-align: center !important;
   background: none !important;
+}
 
+span.button-start,
+span.fold-start {
+  display: block;
   &:hover {
     @include hoverButton();
   }
@@ -133,15 +168,6 @@ body {
 #body {
 }
 
-#footer {
-  hr {
-    display: none;
-  }
-  #bottom-logo {
-    display: none;
-  }
-}
-
 /* width */
 ::-webkit-scrollbar {
   width: 12px;
@@ -169,7 +195,8 @@ body {
 }
 
 @import "components/header";
-@import "components/toggle-mode";
+@import "components/footer";
+@import "components/toggle-theme";
 
 @import "pages/oceny";
 @import "pages/frekfencja";
