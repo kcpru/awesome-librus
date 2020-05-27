@@ -1,4 +1,5 @@
 import router from "./js/router";
+import addFonts from "./js/fonts";
 import ToggleTheme from "./js/toggle-theme";
 
 import "./styles/index.scss";
@@ -13,3 +14,4 @@ const al = new ToggleTheme({
 });
 
 router();
+addFonts();
