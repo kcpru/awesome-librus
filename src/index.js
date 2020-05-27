@@ -4,7 +4,7 @@ import ToggleTheme from "./js/toggle-theme";
 
 import "./styles/index.scss";
 
-const al = new ToggleTheme({
+const toggle = new ToggleTheme({
   theme: [
     { name: "Light", value: "light" },
     { name: "Dark", value: "dark" },
@@ -13,5 +13,5 @@ const al = new ToggleTheme({
   ],
 });
 
-router();
 addFonts();
+router();
