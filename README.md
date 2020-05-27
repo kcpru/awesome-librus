@@ -1,6 +1,6 @@
 # 🦅 Awesome Librus
 
-New look -> Librus on steroids 💪🏼
+Librus on steroids 💪🏼
 
 ## 🔌 Installation
 
@@ -9,9 +9,9 @@ git clone git@github.com:kcpru/awesome-liburs
 npm i
 ```
 
-## Usage
+## 🚀 Usage
 
-### 🔧 Production build
+### Production build
 
 ```bash
 npm run build
@@ -19,11 +19,14 @@ npm run build
 
 You can view the deploy by creating a server in `dist`.
 
-## 🌌 Features
+## 💫 Features
 
 - Themes
+- Refreshed look
 
-## Dependencies
+<img alt="screesnhot" src="screenshot.jpg">
+
+## ☢ Dependencies
 
 ### Webpack
 
@@ -64,10 +67,10 @@ You can view the deploy by creating a server in `dist`.
 - [`optimize-css-assets-webpack-plugin`](https://github.com/NMFR/optimize-css-assets-webpack-plugin) - Optimize and minimize CSS assets.
 - [`terser-webpack-plugin`](https://github.com/webpack-contrib/terser-webpack-plugin) - Minify JavaScript.
 
-## Author
+## 👤 Author
 
 - [Kacper Ślusarczyk](https://github.com/kcpru)
 
-## License
+## 🧾 License
 
 Oh, no.
