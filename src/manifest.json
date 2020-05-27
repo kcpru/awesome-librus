@@ -1,0 +1,21 @@
+{
+  "name": "Awesome Librus",
+  "version": "0.3",
+  "author": "Kacper Ślusarczyk",
+  "manifest_version": 2,
+  "description": "Modern Librus look",
+  "homepage_url": "https://github.com/kcpru/awesome-librus",
+  "icons": {
+    "16": "assets/icon16.png",
+    "48": "assets/icon48.png",
+    "128": "assets/icon128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://synergia.librus.pl/*"],
+      "js": ["main.bundle.js", "runtime.bundle.js"],
+      "css": ["content.css"]
+    }
+  ],
+  "web_accessible_resources": ["assets/*"]
+}

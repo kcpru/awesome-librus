@@ -1,3 +1,9 @@
+// Test import of a JavaScript function, an SVG, and Sass
+// import { ToggleMode } from "./js/toggle-mode";
+import "./styles/index.scss";
+
+import $ from "jquery";
+
 class AwesomeLibrus {
   constructor({ theme }) {
     this.theme = theme;
