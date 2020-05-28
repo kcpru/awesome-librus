@@ -1,4 +1,5 @@
 .container {
+  margin-top: 0 !important;
   background: var(--secondary-background-color);
   box-shadow: none;
 
@@ -25,15 +26,18 @@
           tbody {
             tr {
               td {
-                padding: 0 0.5rem;
+                padding: 1rem 1rem 0 1rem;
+                display: block;
+
+                a,
+                input {
+                  margin: 0 !important;
+                  width: 100% !important;
+                  .button-start {
+                    width: 100% !important;
+                  }
+                }
               }
-            }
-          }
-          a {
-            margin: 0 !important;
-            width: 100% !important;
-            .button-start {
-              width: 100% !important;
             }
           }
         }
@@ -89,8 +93,17 @@
         margin: 1rem 0;
         background: var(--primary-background-color);
         border-radius: $border-radius;
-        td {
-          padding: 0.5rem;
+        tr {
+          td {
+            padding: 1rem !important;
+            display: flex;
+            height: auto;
+
+            input {
+              flex: 1;
+              margin: 0 0.5rem;
+            }
+          }
         }
       }
       .stretch {
