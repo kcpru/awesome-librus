@@ -98,7 +98,11 @@ body {
 }
 
 #body {
-  // margin-top: 2rem !important;
+  margin: auto;
+  max-width: 1200px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 /* width */

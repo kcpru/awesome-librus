@@ -94,10 +94,13 @@
         background: var(--primary-background-color);
         border-radius: $border-radius;
         tr {
+          display: flex;
           td {
+            flex: 1;
             padding: 1rem !important;
-            display: flex;
+            display: inline-flex !important;
             height: auto;
+            box-sizing: border-box;
 
             input {
               flex: 1;
