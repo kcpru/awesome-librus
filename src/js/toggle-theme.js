@@ -1,31 +1,31 @@
-import $ from "jquery";
-import Cookies from "js-cookie";
+import $ from 'jquery'
+import Cookies from 'js-cookie'
 
 class ToggleTheme {
   constructor({ theme }) {
-    this.theme = theme;
-    this.body = $("body");
+    this.theme = theme
+    this.body = $('body')
 
-    this.themeName = Cookies.get("theme") ? Cookies.get("theme") : "light";
+    this.themeName = Cookies.get('theme') ? Cookies.get('theme') : 'light'
 
-    this.appendSelect();
+    this.appendSelect()
 
-    this.toggle = $("#toggle-theme");
-    this.toggleTheme();
+    this.toggle = $('#toggle-theme')
+    this.toggleTheme()
   }
 
   toggleTheme() {
-    this.setClass(this.themeName);
+    this.setTheme(this.themeName)
 
     this.toggle.change(() => {
-      this.setClass(this.toggle.find(":selected").val());
-    });
+      this.setTheme(this.toggle.find(':selected').val())
+    })
   }
 
-  setClass(className) {
-    this.body.removeClass().addClass(className);
-    this.themeName = className;
-    Cookies.set("theme", this.themeName);
+  setTheme(className) {
+    this.body.removeClass().addClass(className)
+    this.themeName = className
+    Cookies.set('theme', this.themeName)
   }
 
   appendSelect() {
@@ -34,17 +34,17 @@ class ToggleTheme {
         `<option value="${value}" ${
           value === this.themeName && `selected`
         }>${name}</option>`
-    );
+    )
 
-    $("#user-section").append(
+    $('#user-section').append(
       `<div id="toggle-theme">
           <label for="theme">Motyw</label>
           <select name="theme" id="theme">
             ${options}
           </select>
         </div>`
-    );
+    )
   }
 }
 
-export default ToggleTheme;
+export default ToggleTheme
