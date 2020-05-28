@@ -1,0 +1,139 @@
+@import 'themes/variables';
+
+@import 'utils/variables';
+
+@import 'utils/mixins';
+
+/** ---- Global style ---- **/
+#page {
+  * {
+    font-family: 'Montserrat' !important;
+    color: var(--primary-text-color);
+  }
+}
+
+span.button-end,
+span.button-start,
+span.fold-end,
+span.fold-start {
+  display: none;
+  text-align: center !important;
+  background: none !important;
+}
+
+span.button-start,
+span.fold-start {
+  display: block;
+  &:hover {
+    @include hoverButton();
+  }
+}
+
+button,
+input[type='button'],
+input[type='submit'],
+select,
+textarea,
+input[type='text'],
+span.button-start,
+span.fold-start {
+  border: none !important;
+  box-shadow: none !important;
+  height: auto !important;
+  padding: 0.5rem !important;
+  border-radius: $border-radius !important;
+  background: var(--primary-button-background-color);
+  color: var(--primary-button-text-color) !important;
+  transition: $transition-time;
+}
+button,
+input[type='button'],
+input[type='submit'] {
+  &:hover {
+    @include hoverButton();
+  }
+}
+input[type='text'] {
+  color: var(--primary-text-color) !important;
+}
+textarea {
+  min-height: 15rem;
+  color: var(--primary-text-color) !important;
+}
+span.button-start {
+  display: block;
+  padding: 0.2rem 1rem !important;
+  width: 80px !important;
+  box-sizing: border-box;
+  background: var(--primary-button-background-color) !important;
+  text-align: center;
+}
+span.fold-start {
+  background: var(--primary-button-background-color) !important;
+}
+
+select {
+  background: var(--secondary-background-color) !important;
+  color: var(--primary-text-color) !important;
+}
+
+table.decorated.stretch {
+  td,
+  th,
+  tr {
+    background: var(--primary-background-color);
+    border: none !important;
+  }
+}
+a {
+  transition: $transition-time;
+  &:hover {
+    color: var(--accent-1) !important;
+  }
+}
+
+/* ---- Body ----*/
+body {
+  background: var(--secondary-background-color) !important;
+}
+
+#body {
+  // margin-top: 2rem !important;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--secondary-background-color);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+}
+
+/* Selection */
+::-moz-selection {
+  color: var(--primary-button-text-color);
+  background: var(--accent-1);
+}
+
+::selection {
+  color: var(--primary-button-text-color);
+  background: var(--accent-1);
+}
+
+@import 'components/header';
+@import 'components/footer';
+@import 'components/toggle-theme';
+
+@import 'pages/oceny';
+@import 'pages/frekfencja';
+@import 'pages/wiadomosci';
+@import 'pages/ogloszenia';
+@import 'pages/terminarz';
+@import 'pages/zadania-domowe';

@@ -15,16 +15,26 @@
       td.message-folders {
         position: sticky !important;
         display: block !important;
-        top: 2rem;
+        top: 4rem;
         margin-right: 1rem;
 
         .message-folders-options {
           background: var(--primary-background-color);
           margin: 1rem 0 0 0;
           border-radius: $border-radius $border-radius 0 0;
-
+          tbody {
+            tr {
+              td {
+                padding: 0 0.5rem;
+              }
+            }
+          }
           a {
-            width: auto !important;
+            margin: 0 !important;
+            width: 100% !important;
+            .button-start {
+              width: 100% !important;
+            }
           }
         }
         .message-folders {
@@ -63,7 +73,7 @@
         // Padding
         .message-labels::after,
         .message-folders::after {
-          content: "";
+          content: '';
           display: block;
           height: 1rem;
         }
@@ -104,7 +114,8 @@
         border-radius: $border-radius;
         background: var(--primary-background-color);
         color: var(--primary-text-color);
-        font-size: 1rem;
+        font-size: 0.9rem;
+        line-height: 1.5rem;
       }
 
       .pagination {

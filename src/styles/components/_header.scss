@@ -5,7 +5,8 @@
   }
   background: var(--secondary-background-color) !important;
   #main-navigation-container {
-    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
+    position: static !important;
+    margin-top: 4.2rem !important;
     background: var(--primary-button-background-color) !important;
     color: var(--primary-button-text-color);
     * {
@@ -49,16 +50,21 @@
   #top-banner-container {
     background: none;
     background: transparent !important;
-    height: 120px;
 
     #top-banner {
       display: none;
     }
 
     #graphic-menu {
-      margin-top: 6rem !important;
+      position: fixed !important;
+      top: 0;
+      left: 0;
       width: 100%;
+      margin: 0 !important;
+      z-index: 999;
       height: auto !important;
+      box-shadow: 0 1rem 2rem -0.3rem #00000020;
+      background: var(--primary-background-color);
 
       .active-link {
         @include hoverButton();
@@ -68,13 +74,15 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        padding: 1rem 0;
+        max-width: 1300px;
+        margin: auto;
 
         li {
           display: flex;
           justify-content: center;
           align-items: center;
           flex: 1;
-          // text-transform: uppercase;
           font-weight: bold;
           text-align: center;
 
@@ -115,6 +123,7 @@
   }
 
   #user-section {
+    position: static !important;
     font-size: 0.8rem;
     padding: 1rem 0;
     text-align: center;
