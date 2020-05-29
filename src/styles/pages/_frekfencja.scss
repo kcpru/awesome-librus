@@ -1,27 +1,157 @@
-div.container.static {
-  margin-top: 3rem;
-}
+// div.container.static {
+//   margin-top: 3rem;
+// }
 
-.container-background {
-  table.filters.decorated.center.small {
-    margin-top: 2rem;
-    overflow: hidden;
-    border-radius: $border-radius;
+// .container-background {
+//   table.filters.decorated.center.small {
+//     margin-top: 2rem;
+//     overflow: hidden;
+//     border-radius: $border-radius;
+//     border: none;
+//     td,
+//     th {
+//       border: none;
+//       background: var(--primary-background-color) !important;
+//     }
+//     thead {
+//       td {
+//         font-weight: bold;
+//         font-size: 0.9rem;
+//       }
+//     }
+//     tbody {
+//       th {
+//         font-weight: bold;
+//       }
+//     }
+//   }
+// }
+
+////////////////@at-root
+table.filters.decorated.center.small {
+  padding: 1rem;
+  background: var(--primary-background-color);
+  border-radius: $border-radius;
+  width: 100%;
+
+  th,
+  td {
     border: none;
-    td,
-    th {
-      border: none;
-      background: var(--primary-background-color) !important;
-    }
-    thead {
+    background: var(--primary-background-color) !important;
+  }
+
+  thead {
+    display: none;
+    tr {
       td {
-        font-weight: bold;
-        font-size: 0.9rem;
       }
     }
-    tbody {
+  }
+
+  tbody {
+    tr {
       th {
+      }
+
+      td {
+        select.small {
+        }
+      }
+    }
+  }
+}
+
+//
+
+table.center.big.decorated {
+  margin: 0 !important;
+  width: 100%;
+  background: var(--primary-background-color);
+  padding: 0 1rem;
+
+  th,
+  td {
+    border: none !important;
+    background: var(--primary-background-color);
+  }
+
+  p.box {
+    border-radius: $border-radius;
+    border: none;
+    padding: 0.2rem;
+    margin: 0.2rem;
+    font-weight: bold;
+    a {
+      color: #000000aa !important;
+    }
+  }
+
+  thead {
+    font-weight: bold;
+    tr {
+      td.center {
+      }
+
+      td.large {
+        br {
+        }
+
+        p.box {
+        }
+      }
+
+      td.colspan {
+        span {
+          border: none !important;
+          background: var(--primary-background-color);
+        }
+      }
+
+      td {
+      }
+    }
+
+    tr.no-border-top {
+      td.spacing {
+      }
+
+      td {
+      }
+
+      td.no-border-right {
+      }
+    }
+  }
+
+  tbody {
+    tr {
+      td.center.bolded {
+        padding-top: 2rem;
         font-weight: bold;
+        font-size: 1.2rem !important;
+      }
+      td:nth-child(1) {
+        font-weight: bold;
+      }
+    }
+
+    tr.line0 {
+      td {
+      }
+
+      td.center.bolded {
+        p.box {
+        }
+      }
+
+      td.right {
+      }
+    }
+  }
+
+  tfoot {
+    tr {
+      td {
       }
     }
   }
