@@ -1,3 +1,5 @@
+//! HTML to CSS: https://htmltocss.github.io/
+
 @import 'themes/variables';
 
 @import 'utils/variables';
@@ -8,9 +10,14 @@
 
 #page {
   * {
-    font-family: 'Montserrat' !important;
+    font-family: 'Baloo Chettan 2' !important;
+    font-size: 101%;
     color: var(--primary-text-color);
   }
+}
+
+a {
+  color: var(--primary-text-color);
 }
 
 span.button-end,
@@ -47,6 +54,7 @@ span.fold-start {
   color: var(--primary-button-text-color) !important;
   transition: $transition-time;
 }
+
 button,
 input[type='button'],
 input[type='submit'] {

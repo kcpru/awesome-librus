@@ -1,34 +1,30 @@
-#header {
-  &::before {
-    display: none !important;
-    opacity: 0;
-  }
+div#header {
   background: var(--secondary-background-color) !important;
-  #main-navigation-container {
+
+  div#main-navigation-container {
     position: static !important;
     margin-top: 4.2rem !important;
     background: var(--primary-button-background-color) !important;
     color: var(--primary-button-text-color);
-    * {
-      text-shadow: none !important;
-    }
-    #main-navigation {
-      #main-menu {
-        .main-menu-list {
+
+    div#main-navigation {
+      div#main-menu {
+        ul.main-menu-list {
           display: block;
           width: 100% !important;
           display: flex !important;
-          > li {
+
+          li {
             flex: 1;
-            a:hover {
-              color: var(--accent-1) !important;
+
+            a {
+              text-shadow: none;
             }
 
             ul {
               padding: 1rem;
               border: none;
               background: var(--primary-button-background-color) !important;
-              color: var(--primary-button-text-color) !important;
               border-radius: 0 0 $border-radius $border-radius !important;
               color: var(--primary-text-color) !important;
               opacity: 1 !important;
@@ -51,10 +47,12 @@
     background: none;
     background: transparent !important;
 
-    #top-banner {
+    a {
       display: none;
-    }
 
+      #top-banner {
+      }
+    }
     #graphic-menu {
       position: fixed !important;
       top: 0;
@@ -65,10 +63,6 @@
       height: auto !important;
       box-shadow: 0 1rem 2rem -0.3rem #00000020;
       background: var(--primary-background-color);
-
-      .active-link {
-        @include hoverButton();
-      }
 
       ul {
         display: flex;
@@ -100,7 +94,8 @@
             align-items: center;
             transition: $transition-time;
 
-            &:hover {
+            &:hover,
+            &.active-link {
               @include hoverButton();
             }
 
@@ -109,14 +104,15 @@
             }
           }
 
-          .counter {
-            display: block;
-            font-weight: bold;
-            border-radius: $border-radius !important;
-            padding: 0.1rem 0.5rem !important;
-            font-size: 0.8rem !important;
-            background: var(--accent-3) !important;
-          }
+          //?
+          //   .counter {
+          //     display: block;
+          //     font-weight: bold;
+          //     border-radius: $border-radius !important;
+          //     padding: 0.1rem 0.5rem !important;
+          //     font-size: 0.8rem !important;
+          //     background: var(--accent-3) !important;
+          //   }
         }
       }
     }
@@ -129,11 +125,29 @@
     text-align: center;
     color: var(--primary-text-color);
 
+    //TODO display: fixed; top: 0; left: 0
     .luckyNumber {
       background: var(--accent-3);
       color: var(--primary-button-text-color);
       padding: 0.4rem;
       border-radius: $border-radius;
+
+      b {
+      }
+    }
+
+    // "Historia logowań"
+    .tooltip {
+      display: none;
+    }
+
+    .tooltip.helper-icon {
+      display: none;
+    }
+
+    b {
+      .tooltip.helper-icon {
+      }
     }
   }
 }

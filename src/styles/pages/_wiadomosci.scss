@@ -1,173 +1,316 @@
-.container {
-  margin-top: 0 !important;
-  background: var(--secondary-background-color);
-  box-shadow: none;
-
-  .inside {
-    display: none;
+form#formWiadomosci {
+  input {
   }
-  .container-background {
-    padding: 0 !important;
+
+  input#filtrUzytkownikow {
+  }
+
+  div.container {
+    margin-top: 0 !important;
     background: var(--secondary-background-color);
-    border: none;
     box-shadow: none;
 
-    .stretch {
-      td.message-folders {
-        position: sticky !important;
-        display: block !important;
-        top: 4rem;
-        margin-right: 1rem;
+    h2.inside {
+      display: none;
+    }
 
-        .message-folders-options {
-          background: var(--primary-background-color);
-          margin: 1rem 0 0 0;
-          border-radius: $border-radius $border-radius 0 0;
-          tbody {
-            tr {
-              td {
-                padding: 1rem 1rem 0 1rem;
-                display: block;
+    div.container-background {
+      padding: 0 !important;
+      background: var(--secondary-background-color);
+      border: none;
+      box-shadow: none;
 
-                a,
-                input {
-                  margin: 0 !important;
-                  width: 100% !important;
-                  .button-start {
-                    width: 100% !important;
+      // Alert
+      .green {
+        .container-background {
+          box-shadow: none;
+          padding: 1rem !important;
+          border-radius: $border-radius;
+          font-size: 0.9rem;
+          font-weight: bold;
+          background: var(--accent-1);
+
+          p {
+            opacity: 0.9;
+          }
+        }
+      }
+
+      table.stretch {
+        tbody {
+          tr {
+            td.message-folders {
+              position: sticky !important;
+              display: block !important;
+              top: 4rem;
+              margin-right: 1rem;
+
+              table.message-folders-options {
+                background: var(--primary-background-color);
+                margin: 1rem 0 0 0;
+                border-radius: $border-radius $border-radius 0 0;
+
+                tbody {
+                  tr {
+                    td {
+                      padding: 1rem 1rem 0 1rem;
+                      display: block;
+
+                      a.button,
+                      input {
+                        margin: 0 !important;
+                        width: 100% !important;
+
+                        .button-start {
+                          width: 100% !important;
+                        }
+                      }
+                      
+                      input {
+                        padding: 0.4rem !important;
+                      }
+                    }
+                  }
+                }
+              }
+
+              table.message-folders {
+                border-radius: 0 0 $border-radius $border-radius;
+                padding-bottom: 1rem;
+                text-transform: uppercase;
+                background: var(--primary-background-color);
+
+                // Padding
+                &::after {
+                  content: '';
+                  display: block;
+                  height: 1rem;
+                }
+
+                tbody {
+                  tr {
+                    td.tree-last-branch,
+                    td.tree-next-branch,
+                    td.tree-first-branch {
+                      opacity: 0;
+                      background: none;
+                    }
+                    td {
+                      a.selected {
+                        color: var(--accent-1) !important;
+                      }
+                    }
+                  }
+                }
+              }
+
+              hr.message-block-separator {
+                display: none;
+              }
+
+              table.stretch {
+                tbody {
+                  tr {
+                    td {
+                      input.small {
+                      }
+                    }
+                  }
+                }
+              }
+
+              table.message-labels {
+                border-radius: 0 0 $border-radius $border-radius;
+                padding-bottom: 1rem;
+                background: var(--primary-background-color);
+
+                // Padding
+                &::after {
+                  content: '';
+                  display: block;
+                  height: 1rem;
+                }
+
+                tbody {
+                  tr {
+                    td.space-holder {
+                    }
+
+                    td.label-color {
+                      span.color-box {
+                        border-radius: $border-radius;
+                      }
+                    }
+
+                    td.label-name {
+                      a {
+                        color: var(--primary-text-color) !important;
+                      }
+                    }
                   }
                 }
               }
             }
-          }
-        }
-        .message-folders {
-          border-radius: 0 0 $border-radius $border-radius;
-          padding-bottom: 1rem;
-          text-transform: uppercase;
-          background: var(--primary-background-color);
 
-          .tree-last-branch,
-          .tree-next-branch,
-          .tree-first-branch {
-            opacity: 0;
-            background: none;
-          }
-        }
-        .message-block-separator {
-          display: none;
-        }
-        .message-labels {
-          border-radius: 0 0 $border-radius $border-radius;
-          padding-bottom: 1rem;
-          background: var(--primary-background-color);
+            td {
+              table.stretch.message-button-panel {
+                margin: 1rem 0;
+                background: var(--primary-background-color);
+                border-radius: $border-radius;
 
-          .label-color {
-            .color-box {
-              border-radius: $border-radius;
-            }
-          }
-          .label-name {
-            a {
-              color: var(--primary-text-color) !important;
-            }
-          }
-        }
+                tbody {
+                  tr {
+                    display: flex;
 
-        // Padding
-        .message-labels::after,
-        .message-folders::after {
-          content: '';
-          display: block;
-          height: 1rem;
-        }
-      }
-      // /napisz-wiadomosc
-      .message-recipients {
-        background: var(--primary-background-color);
-        border-radius: $border-radius;
-        padding: 0.5rem 1rem;
-      }
-      // Top and bottom
-      .message-button-panel {
-        margin: 1rem 0;
-        background: var(--primary-background-color);
-        border-radius: $border-radius;
-        tr {
-          display: flex;
-          td {
-            flex: 1;
-            padding: 1rem !important;
-            display: inline-flex !important;
-            height: auto;
-            box-sizing: border-box;
+                    td {
+                      flex: 1;
+                      padding: 1rem !important;
+                      display: inline-flex !important;
+                      height: 4rem;
+                      box-sizing: border-box;
+                      &:nth-child(2) {
+                        display: none !important;
+                      }
+                      select,
+                      input {
+                        flex: 1;
+                        margin: 0 0.5rem;
+                        padding: 0 1rem !important;
+                        height: 2rem;
+                      }
+                    }
 
-            input {
-              flex: 1;
-              margin: 0 0.5rem;
-            }
-          }
-        }
-      }
-      .stretch {
-      }
-      // Main table
-      .decorated.stretch {
-        overflow: hidden;
-        border-radius: $border-radius;
-        td {
-          background: var(--primary-background-color) !important;
-        }
-        // <thead>
-
-        // <tbody>
-
-        // <tfoot>
-      }
-      // /wiadomosci/ID
-      .container-message-content {
-        border: none;
-        border-radius: $border-radius;
-        background: var(--primary-background-color);
-        color: var(--primary-text-color);
-        font-size: 0.9rem;
-        line-height: 1.5rem;
-      }
-
-      .pagination {
-        ul {
-          li {
-            margin: 0 0.8rem;
-            border: none !important;
-            background: none !important;
-
-            &:hover {
-              border: none !important;
-              background: none !important;
-            }
-
-            a,
-            &.active {
-              font-weight: bold;
-              display: block;
-              border-radius: $border-radius;
-              background: var(--primary-button-background-color);
-              color: var(--primary-button-text-color) !important;
-              padding: 0.3rem;
-              transition: $transition-time;
-            }
-
-            a {
-              &:hover {
-                @include hoverButton();
+                    td.big {
+                      select.big {
+                      }
+                    }
+                  }
+                }
               }
-            }
 
-            &.active {
-              user-select: none;
-              cursor: not-allowed;
-              color: var(--primary-button-background-color) !important;
-              background: var(--accent-1) !important;
+              div.container-message-content {
+                border: none;
+                border-radius: $border-radius;
+                background: var(--primary-background-color);
+                color: var(--primary-text-color);
+                font-size: 1rem;
+                line-height: 1.5rem;
+
+                a {
+                  text-decoration: underline;
+                }
+              }
+
+              table.decorated {
+                thead {
+                  tr {
+                    td.micro {
+                    }
+
+                    td {
+                      a {
+                      }
+
+                      input {
+                      }
+                    }
+                  }
+                }
+
+                tbody {
+                  tr.line0 {
+                    td.micro {
+                      input.wiadomoscLista {
+                      }
+                    }
+
+                    td {
+                      a {
+                      }
+                    }
+
+                    td.medium {
+                    }
+                  }
+
+                  tr.line1 {
+                    td.micro {
+                      input.wiadomoscLista {
+                      }
+                    }
+
+                    td {
+                      a {
+                      }
+                    }
+
+                    td.medium {
+                    }
+                  }
+                }
+
+                tfoot {
+                  tr {
+                    td {
+                    }
+                  }
+                }
+              }
+
+              div.pagination {
+                background: var(--primary-background-color);
+                padding: 1rem;
+                box-sizing: border-box;
+                border-radius: $border-radius;
+
+                hr {
+                  display: none;
+                }
+
+                span {
+                  font-size: 1rem;
+                  margin: 0 0 1rem 0;
+                  font-weight: bold;
+                }
+
+                ul {
+                  li.active {
+                    user-select: none;
+                    cursor: not-allowed;
+                    color: var(--primary-button-background-color) !important;
+                    background: var(--accent-1) !important;
+                  }
+
+                  li {
+                    margin: 0 0.8rem;
+                    border: none !important;
+                    background: none !important;
+
+                    a,
+                    &.active {
+                      font-weight: bold;
+                      display: block;
+                      border-radius: $border-radius;
+                      background: var(--primary-button-background-color);
+                      color: var(--primary-button-text-color) !important;
+                      padding: 0.3rem;
+                      transition: $transition-time;
+
+                      &:hover {
+                        @include hoverButton();
+                      }
+                    }
+                  }
+
+                  li.jump {
+                    a {
+                    }
+                  }
+                }
+              }
+
+              input {
+              }
             }
           }
         }
