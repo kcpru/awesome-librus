@@ -132,7 +132,22 @@ div#header {
       padding: 0.4rem;
       border-radius: $border-radius;
 
+      // position: fixed;
+      // top: 0;
+      // left: 0;
+      // z-index: 1000;
+      // margin: 1rem;
+      // display: block;
+
+      // &::before {
+      //   content: 'Szczęśliwy numerek ';
+      //   color: var(--primary-text-color);
+      // }
+
       b {
+        display: relative;
+        top: 0;
+        right: 0;
       }
     }
 
