@@ -1,0 +1,48 @@
+form#formFiltrZadania {
+  table.decorated {
+    margin-top: 0 !important;
+    background: var(--primary-background-color) !important;
+    box-shadow: none;
+    padding: 1rem;
+    border: none;
+
+    td,
+    th {
+      border: none;
+      background: var(--primary-background-color) !important;
+    }
+
+    thead {
+      display: none;
+      tr {
+        td {
+        }
+      }
+    }
+
+    tbody {
+      tr {
+        th {
+          font-weight: bold;
+        }
+
+        td {
+          input.small {
+          }
+
+          p.dateRange {
+          }
+        }
+      }
+    }
+
+    tfoot {
+      tr {
+        td {
+          input.small {
+          }
+        }
+      }
+    }
+  }
+}
