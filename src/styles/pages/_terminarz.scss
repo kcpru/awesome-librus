@@ -1,0 +1,77 @@
+table.kalendarz.decorated.center {
+  margin-top: 0 !important;
+  background: var(--primary-background-color) !important;
+  box-shadow: none;
+  padding: 1rem;
+
+  td,
+  th {
+    border: none;
+    background: var(--primary-background-color) !important;
+  }
+
+  thead {
+    font-weight: bold;
+    tr {
+      height: 3rem;
+      td.center {
+        a.left {
+          img {
+          }
+        }
+
+        select.ListaWyboru {
+        }
+
+        a.right {
+          img {
+          }
+        }
+      }
+    }
+  }
+
+  tbody {
+    tr {
+      td {
+      }
+
+      td.center {
+        div.kalendarz-dzien {
+          div.kalendarz-numer-dnia {
+          }
+
+          table {
+            tbody {
+              tr {
+                height: 8rem;
+                td.no-border-left {
+                  font-weight: bold;
+                  &:hover {
+                    color: var(--accent-1) !important;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    // tr.line1 {
+    //   td.center {
+    //     div.kalendarz-dzien {
+    //       div.kalendarz-numer-dnia {
+    //       }
+    //     }
+    //   }
+    // }
+  }
+
+  tfoot {
+    tr {
+      td {
+      }
+    }
+  }
+}

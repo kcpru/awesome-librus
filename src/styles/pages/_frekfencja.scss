@@ -1,33 +1,3 @@
-// div.container.static {
-//   margin-top: 3rem;
-// }
-
-// .container-background {
-//   table.filters.decorated.center.small {
-//     margin-top: 2rem;
-//     overflow: hidden;
-//     border-radius: $border-radius;
-//     border: none;
-//     td,
-//     th {
-//       border: none;
-//       background: var(--primary-background-color) !important;
-//     }
-//     thead {
-//       td {
-//         font-weight: bold;
-//         font-size: 0.9rem;
-//       }
-//     }
-//     tbody {
-//       th {
-//         font-weight: bold;
-//       }
-//     }
-//   }
-// }
-
-////////////////@at-root
 table.filters.decorated.center.small {
   padding: 1rem;
   background: var(--primary-background-color);
