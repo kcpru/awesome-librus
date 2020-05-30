@@ -14,7 +14,7 @@
     .right.screen-only {
     }
 
-    .decorated.stretch {
+    table.decorated.stretch {
       overflow: hidden;
       border-radius: $border-radius;
       border: none;
@@ -29,13 +29,19 @@
           background: var(--primary-background-color) !important;
         }
       }
-
+      > tbody {
+        > tr:last-child {
+          > td:first-child {
+            display: none;
+          }
+        }
+      }
       table {
         overflow: hidden;
         background: var(--secondary-background-color) !important;
       }
 
-      td[colspan="16"] {
+      td[colspan='16'] {
         background: var(--secondary-background-color) !important;
       }
 
@@ -55,6 +61,10 @@
             }
           }
         }
+      }
+
+      > tfoot {
+        display: none;
       }
 
       .grade-box {
@@ -100,7 +110,7 @@
       }
     }
     #absenceGraph {
-        margin-top: 6rem;
+      margin-top: 6rem;
     }
   }
 }
