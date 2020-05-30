@@ -1,10 +1,9 @@
 //! HTML to CSS: https://htmltocss.github.io/
 
-@import 'themes/variables';
-
+@import 'utils/mixins';
 @import 'utils/variables';
 
-@import 'utils/mixins';
+@import 'themes/variables';
 
 /** ---- Global style ---- **/
 
@@ -24,6 +23,7 @@ span.button-end,
 span.button-start,
 span.fold-end,
 span.fold-start {
+  font-weight: bold;
   display: none;
   text-align: center !important;
   background: none !important;
@@ -58,6 +58,8 @@ span.fold-start {
 button,
 input[type='button'],
 input[type='submit'] {
+  font-weight: bold;
+
   &:hover {
     @include hoverButton();
   }
@@ -97,11 +99,10 @@ table.decorated.stretch {
 a {
   transition: $transition-time;
   &:hover {
-    color: var(--accent-1) !important;
+    color: var(--primary-color) !important;
   }
 }
 
-/* ---- Body ----*/
 body {
   background: var(--secondary-background-color) !important;
 }
@@ -114,6 +115,18 @@ body {
   transform: translateX(-50%);
 }
 
+// Ohter
+div.container-background {
+  padding: 0 !important;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+h2.inside {
+  display: none;
+}
+
 /* width */
 ::-webkit-scrollbar {
   width: 12px;
@@ -121,7 +134,7 @@ body {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: var(--secondary-background-color);
+  background: transparent;
 }
 
 /* Handle */
@@ -131,13 +144,13 @@ body {
 
 /* Selection */
 ::-moz-selection {
-  color: var(--primary-button-text-color);
-  background: var(--accent-1);
+  color: var(--primary-button-text-color-hover);
+  background: var(--primary-button-background-color-hover);
 }
 
 ::selection {
-  color: var(--primary-button-text-color);
-  background: var(--accent-1);
+  color: var(--primary-button-text-color-hover);
+  background: var(--primary-button-background-color-hover);
 }
 
 @import 'components/header';
