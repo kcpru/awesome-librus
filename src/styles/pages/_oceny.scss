@@ -1,116 +1,102 @@
-.container {
-  .fold {
-    a.fold-link {
-      span.fold-start {
-        padding: 0 1rem !important;
-      }
-    }
-  }
-
-  .container-background {
-    .container-icon {
-      display: none;
-    }
-    .right.screen-only {
-    }
-
-    table.decorated.stretch {
-      overflow: hidden;
-      border-radius: $border-radius;
-      border: none;
-      td,
-      th {
-        background: var(--primary-background-color) !important;
-      }
-      > thead {
-        font-weight: bold;
-        span {
-          border: none;
-          background: var(--primary-background-color) !important;
+form[name='PrzegladajOceny'] {
+  .container {
+    .fold {
+      a.fold-link {
+        span.fold-start {
+          padding: 0 1rem !important;
         }
       }
-      > tbody {
-        > tr:last-child {
-          > td:first-child {
-            display: none;
-          }
-        }
-      }
-      table {
-        overflow: hidden;
-        background: var(--secondary-background-color) !important;
-      }
+    }
 
-      td[colspan='16'] {
-        background: var(--secondary-background-color) !important;
-      }
-
-      > tbody {
-        > tr {
-          //   height: 5rem;
-          > td > table {
-            border: 2px solid var(--secondary-background-color) !important;
-
-            table,
-            tbody,
-            thead,
-            td,
-            th,
-            tr {
-              border: 2px solid var(--secondary-background-color) !important;
-            }
-          }
+    .container-background {
+      .container-icon {
+        img {
+          display: none;
         }
       }
 
-      > tfoot {
+      h3.center {
         display: none;
       }
 
-      .grade-box {
-        color: #333333 !important;
-        padding: 0.3rem;
-        border-radius: $border-radius;
-        font-weight: bold;
-        margin: 0.3rem !important;
-        a {
-          color: #000000c0 !important;
-        }
-      }
-    }
-
-    .legend {
-      margin-top: 3rem;
-      h3 {
-        text-align: center;
-        font-weight: bold;
-        font-size: 1.2rem;
-      }
-      ul {
-        li {
-          p {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 0.8rem;
-
-            span,
-            strong,
-            b {
-              display: block;
-              width: auto;
-              padding: 0.5rem;
-              margin: 0.3rem;
-              border-radius: $border-radius;
-              background: var(--primary-background-color) !important;
-              font-weight: bold;
-            }
+      .right.screen-only {
+        > table {
+          background: var(--primary-background-color);
+          margin: 1rem 0;
+          border-radius: $border-radius;
+          table.right {
+            padding: 0.5rem;
           }
         }
       }
-    }
-    #absenceGraph {
-      margin-top: 6rem;
+
+      table.decorated.stretch {
+        overflow: hidden;
+        border-radius: $border-radius;
+        border: none;
+
+        td,
+        th {
+          background: var(--primary-background-color) !important;
+        }
+        > thead {
+          font-weight: bold;
+          span {
+            border: none;
+            background: var(--primary-background-color) !important;
+          }
+        }
+        > tbody {
+          > tr:last-child {
+            > td:first-child {
+              display: none;
+            }
+          }
+        }
+        table {
+          overflow: hidden;
+          background: var(--secondary-background-color) !important;
+        }
+
+        td[colspan='16'] {
+          background: var(--secondary-background-color) !important;
+        }
+
+        > tbody {
+          > tr {
+            //   height: 5rem;
+            > td > table {
+              border: 2px solid var(--secondary-background-color) !important;
+
+              table,
+              tbody,
+              thead,
+              td,
+              th,
+              tr {
+                border: 2px solid var(--secondary-background-color) !important;
+              }
+            }
+          }
+        }
+
+        > tfoot {
+          display: none;
+        }
+
+        .grade-box {
+          color: #333333 !important;
+          padding: 0.3rem;
+          border-radius: $border-radius;
+          font-weight: bold;
+          margin: 0.3rem !important;
+          a {
+            color: #000000c0 !important;
+          }
+        }
+      }
+
+      @include legend();
     }
   }
 }

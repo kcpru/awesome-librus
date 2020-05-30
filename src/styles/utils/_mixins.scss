@@ -1,4 +1,67 @@
 @mixin hoverButton() {
-  background: var(--accent-1) !important;
-  box-shadow: 0 0.2rem 1rem -0.4rem var(--accent-1) !important;
+  background: var(--primary-button-background-color-hover) !important;
+  box-shadow: 0 0.2rem 1rem -0.4rem var(--primary-button-background-color-hover) !important;
+  color: var(--primary-button-text-color-hover) !important;
+}
+
+@mixin legend() {
+  .legend {
+    margin-top: 3rem;
+    h3 {
+      text-align: center;
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+    ul {
+      li {
+        p {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 0.8rem;
+
+          span,
+          strong,
+          b {
+            display: block;
+            width: auto;
+            padding: 0.5rem;
+            margin: 0.3rem;
+            border-radius: $border-radius;
+            background: var(--primary-background-color) !important;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+}
+
+@mixin defaultTheme(
+  $primary-color,
+  $primary-background-color,
+  $primary-text-color,
+  $secondary-background-color
+) {
+  --primary-color: #{$primary-color};
+  --primary-background-color: #{$primary-background-color};
+  --primary-text-color: #{$primary-text-color};
+
+  --secondary-background-color: #{$secondary-background-color};
+
+  // Button
+  --primary-button-background-color: #{$primary-color + '30'};
+  --primary-button-text-color: #{$primary-color};
+  --primary-button-background-color-hover: #{$primary-color};
+  --primary-button-text-color-hover: #{$primary-background-color};
+
+  --secondary-button-background-color: #{$secondary-background-color};
+  --secondary-button-text-color: #{$primary-text-color};
+  --secondary-button-background-color-hover: #{$primary-text-color};
+  --secondary-button-text-color-hover: #{$secondary-background-color};
+
+  // Other
+  --accent-1: #ea2a56;
+  --accent-2: #442643;
+  --accent-3: #f5a817;
 }
