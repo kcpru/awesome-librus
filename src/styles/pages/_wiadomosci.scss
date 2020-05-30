@@ -1,136 +1,245 @@
-form#formWiadomosci {
-  div.container {
-    margin-top: 0 !important;
-    background: transparent;
+// form#formWiadomosci {
+
+div.container {
+  margin-top: 0 !important;
+  background: var(--secondary-background-color);
+  box-shadow: none;
+
+  h2.inside {
+    display: none;
+  }
+
+  div.container-background {
+    padding: 0 !important;
+    background: var(--secondary-background-color);
+    border: none;
     box-shadow: none;
 
-    div.container-background {
-      
-      // Alert
-      .green {
-        .container-background {
-          box-shadow: none;
-          padding: 1rem !important;
-          border-radius: $border-radius;
-          font-size: 0.9rem;
-          font-weight: bold;
-          background: var(--accent-1);
+    // Alert
+    .green {
+      .container-background {
+        box-shadow: none;
+        padding: 1rem !important;
+        border-radius: $border-radius;
+        font-size: 0.9rem;
+        font-weight: bold;
+        background: var(--accent-1);
 
-          p {
-            opacity: 0.9;
-          }
+        p {
+          opacity: 0.9;
         }
       }
+    }
 
-      table.stretch {
-        tbody {
-          tr {
-            td.message-folders {
-              position: sticky !important;
-              display: block !important;
-              top: 4rem;
-              margin-right: 1rem;
+    table.stretch {
+      tbody {
+        tr {
+          td.message-folders {
+            position: sticky !important;
+            display: block !important;
+            top: 4rem;
+            margin-right: 1rem;
 
-              table.message-folders-options {
-                background: var(--primary-background-color);
-                margin: 1rem 0 0 0;
-                border-radius: $border-radius $border-radius 0 0;
+            table.message-folders-options {
+              background: var(--primary-background-color);
+              margin: 1rem 0 0 0;
+              border-radius: $border-radius $border-radius 0 0;
 
-                tbody {
-                  tr {
-                    td {
-                      padding: 1rem 1rem 0 1rem;
-                      display: block;
+              tbody {
+                tr {
+                  td {
+                    padding: 1rem 1rem 0 1rem;
+                    display: block;
 
-                      a.button,
-                      input {
-                        margin: 0 !important;
+                    a.button,
+                    input {
+                      margin: 0 !important;
+                      width: 100% !important;
+
+                      .button-start {
                         width: 100% !important;
-
-                        .button-start {
-                          width: 100% !important;
-                        }
                       }
+                    }
 
-                      input {
-                        padding: 0.4rem !important;
-                      }
+                    input {
+                      padding: 0.4rem !important;
                     }
                   }
                 }
               }
+            }
 
-              table.message-folders {
-                border-radius: 0 0 $border-radius $border-radius;
-                padding-bottom: 1rem;
-                text-transform: uppercase;
-                background: var(--primary-background-color);
+            table.message-folders {
+              border-radius: 0 0 $border-radius $border-radius;
+              padding-bottom: 1rem;
+              text-transform: uppercase;
+              background: var(--primary-background-color);
 
-                // Padding
-                &::after {
-                  content: '';
-                  display: block;
-                  height: 1rem;
-                }
+              // Padding
+              &::after {
+                content: '';
+                display: block;
+                height: 1rem;
+              }
 
-                tbody {
-                  tr {
-                    td.tree-last-branch,
-                    td.tree-next-branch,
-                    td.tree-first-branch {
-                      opacity: 0;
-                      background: none;
-                    }
-                    td {
-                      a.selected {
-                        color: var(--primary-color) !important;
-                      }
+              tbody {
+                tr {
+                  td.tree-last-branch,
+                  td.tree-next-branch,
+                  td.tree-first-branch {
+                    opacity: 0;
+                    background: none;
+                  }
+                  td {
+                    a.selected {
+                      color: var(--accent-1) !important;
                     }
                   }
                 }
               }
+            }
 
-              hr.message-block-separator {
-                display: none;
-              }
+            hr.message-block-separator {
+              display: none;
+            }
 
-              table.stretch {
-                tbody {
-                  tr {
-                    td {
-                      input.small {
-                      }
+            table.stretch {
+              tbody {
+                tr {
+                  td {
+                    input.small {
                     }
                   }
                 }
               }
+            }
 
-              table.message-labels {
-                border-radius: 0 0 $border-radius $border-radius;
-                padding-bottom: 1rem;
-                background: var(--primary-background-color);
+            table.message-labels {
+              border-radius: 0 0 $border-radius $border-radius;
+              padding-bottom: 1rem;
+              background: var(--primary-background-color);
 
-                // Padding
-                &::after {
-                  content: '';
-                  display: block;
-                  height: 1rem;
+              // Padding
+              &::after {
+                content: '';
+                display: block;
+                height: 1rem;
+              }
+
+              tbody {
+                tr {
+                  td.space-holder {
+                  }
+
+                  td.label-color {
+                    span.color-box {
+                      border-radius: $border-radius;
+                    }
+                  }
+
+                  td.label-name {
+                    a {
+                      color: var(--primary-text-color) !important;
+                    }
+                  }
                 }
+              }
+            }
+          }
 
-                tbody {
-                  tr {
-                    td.space-holder {
+          td {
+            table.stretch.message-button-panel {
+              margin: 1rem 0;
+              background: var(--primary-background-color);
+              border-radius: $border-radius;
+
+              tbody {
+                tr {
+                  display: flex;
+
+                  td {
+                    flex: 1;
+                    padding: 1rem !important;
+                    display: inline-flex !important;
+                    height: 4rem;
+                    box-sizing: border-box;
+                    &:nth-child(2) {
+                      display: none !important;
+                    }
+                    select,
+                    input {
+                      flex: 1;
+                      margin: 0 0.5rem;
+                      padding: 0 1rem !important;
+                      height: 2rem;
+                    }
+                  }
+
+                  td.big {
+                    select.big {
+                    }
+                  }
+                }
+              }
+            }
+
+            div.container-message-content {
+              border: none;
+              border-radius: $border-radius;
+              background: var(--primary-background-color);
+              color: var(--primary-text-color);
+              font-size: 1rem;
+              line-height: 1.5rem;
+
+              a {
+                text-decoration: underline;
+              }
+            }
+
+            // Pliki do pobrania
+            table:nth-child(4):not(.message-folders-options) {
+              display: block;
+
+              tbody {
+                tr:not(:nth-child(1)) {
+                  display: inline-block;
+                  padding: 1rem;
+                  margin: 1rem 1rem 1rem 0;
+                  border-radius: $border-radius;
+                  min-width: 5rem;
+                  background: var(--primary-background-color);
+                  position: relative;
+                  // font-weight: bold;
+
+                  td {
+                    display: block;
+                    text-align: center;
+                    img {
+                      display: block;
+                      position: absolute;
+                      bottom: 0;
+                      left: 0;
+                      width: 100%;
+                      height: 1.5rem;
+
+                      opacity: 0; // Magic
+                      z-index: 1;
                     }
 
-                    td.label-color {
-                      span.color-box {
-                        border-radius: $border-radius;
-                      }
-                    }
-
-                    td.label-name {
+                    &:nth-child(2) {
                       a {
-                        color: var(--primary-text-color) !important;
+                        &::after {
+                          content: 'Pobierz';
+                          display: block;
+                          position: absolute;
+                          bottom: 0;
+                          left: 0;
+                          width: 100%;
+                          height: 1.5rem;
+                          background: var(--primary-button-background-color);
+                          color: var(--primary-button-text-color);
+                          border-radius: 0 0 $border-radius $border-radius;
+                        }
                       }
                     }
                   }
@@ -138,223 +247,115 @@ form#formWiadomosci {
               }
             }
 
-            td {
-              table.stretch.message-button-panel {
-                margin: 1rem 0;
-                background: var(--primary-background-color);
-                border-radius: $border-radius;
+            table.decorated {
+              thead {
+                tr {
+                  td.micro {
+                  }
 
-                tbody {
-                  tr {
-                    display: flex;
-
-                    td {
-                      flex: 1;
-                      padding: 1rem !important;
-                      display: inline-flex !important;
-                      height: 4rem;
-                      box-sizing: border-box;
-                      &:nth-child(2) {
-                        display: none !important;
-                      }
-                      select,
-                      input {
-                        flex: 1;
-                        margin: 0 0.5rem;
-                        padding: 0 1rem !important;
-                        height: 2rem;
-                      }
+                  td {
+                    a {
                     }
 
-                    td.big {
-                      select.big {
-                      }
+                    input {
                     }
                   }
                 }
               }
 
-              div.container-message-content {
-                border: none;
-                border-radius: $border-radius;
-                background: var(--primary-background-color);
-                color: var(--primary-text-color);
+              tbody {
+                tr.line0 {
+                  td.micro {
+                    input.wiadomoscLista {
+                    }
+                  }
+
+                  td {
+                    a {
+                    }
+                  }
+
+                  td.medium {
+                  }
+                }
+
+                tr.line1 {
+                  td.micro {
+                    input.wiadomoscLista {
+                    }
+                  }
+
+                  td {
+                    a {
+                    }
+                  }
+
+                  td.medium {
+                  }
+                }
+              }
+
+              tfoot {
+                tr {
+                  td {
+                  }
+                }
+              }
+            }
+
+            div.pagination {
+              background: var(--primary-background-color);
+              padding: 1rem;
+              box-sizing: border-box;
+              border-radius: $border-radius;
+
+              hr {
+                display: none;
+              }
+
+              span {
                 font-size: 1rem;
-                line-height: 1.5rem;
-
-                a {
-                  text-decoration: underline;
-                }
+                margin: 0 0 1rem 0;
+                font-weight: bold;
               }
 
-              // Pliki do pobrania
-              table:nth-child(4):not(.message-folders-options) {
-                display: block;
+              ul {
+                li.active {
+                  user-select: none;
+                  cursor: not-allowed;
+                  color: var(--primary-button-background-color) !important;
+                  background: var(--accent-1) !important;
+                }
 
-                tbody {
-                  tr:not(:nth-child(1)) {
-                    display: inline-block;
-                    padding: 1rem;
-                    margin: 1rem 1rem 1rem 0;
+                li {
+                  margin: 0 0.8rem;
+                  border: none !important;
+                  background: none !important;
+
+                  a,
+                  &.active {
+                    font-weight: bold;
+                    display: block;
                     border-radius: $border-radius;
-                    min-width: 5rem;
-                    background: var(--primary-background-color);
-                    position: relative;
-                    // font-weight: bold;
+                    background: var(--primary-button-background-color);
+                    color: var(--primary-button-text-color) !important;
+                    padding: 0.3rem;
+                    transition: $transition-time;
 
-                    td {
-                      display: block;
-                      text-align: center;
-                      img {
-                        display: block;
-                        position: absolute;
-                        bottom: 0;
-                        left: 0;
-                        width: 100%;
-                        height: 1.5rem;
-
-                        opacity: 0; // Magic
-                        z-index: 1;
-                      }
-
-                      &:nth-child(2) {
-                        a {
-                          &::after {
-                            content: 'Pobierz';
-                            display: block;
-                            position: absolute;
-                            bottom: 0;
-                            left: 0;
-                            width: 100%;
-                            height: 1.5rem;
-                            background: var(--primary-button-background-color);
-                            color: var(--primary-button-text-color);
-                            border-radius: 0 0 $border-radius $border-radius;
-                          }
-                        }
-                      }
+                    &:hover {
+                      @include hoverButton();
                     }
+                  }
+                }
+
+                li.jump {
+                  a {
                   }
                 }
               }
+            }
 
-              table.decorated.stretch {
-                overflow: hidden;
-                border-radius: $border-radius;
-
-                thead {
-                  font-weight: bold;
-                  
-                  tr {
-                    td.micro {
-                    }
-
-                    td {
-                      a {
-                      }
-
-                      input {
-                      }
-                    }
-                  }
-                }
-
-                tbody {
-                  tr.line0 {
-                    td.micro {
-                      input.wiadomoscLista {
-                      }
-                    }
-
-                    td {
-                      a {
-                      }
-                    }
-
-                    td.medium {
-                    }
-                  }
-
-                  tr.line1 {
-                    td.micro {
-                      input.wiadomoscLista {
-                      }
-                    }
-
-                    td {
-                      a {
-                      }
-                    }
-
-                    td.medium {
-                    }
-                  }
-                }
-
-                tfoot {
-                  tr {
-                    td {
-                    }
-                  }
-                }
-              }
-
-              div.pagination {
-                background: var(--primary-background-color);
-                padding: 1rem;
-                box-sizing: border-box;
-                border-radius: $border-radius;
-
-                hr {
-                  display: none;
-                }
-
-                span {
-                  font-size: 1rem;
-                  margin: 0 0 1rem 0;
-                  font-weight: bold;
-                }
-
-                ul {
-                  li.active {
-                    user-select: none;
-                    cursor: not-allowed;
-                    background: var(--primary-button-background-color-hover) !important;
-                  }
-
-                  li {
-                    margin: 0 0.8rem;
-                    border: none !important;
-                    background: none !important;
-
-                    a,
-                    &.active {
-                      font-weight: bold;
-                      display: block;
-                      border-radius: $border-radius;
-                      background: var(--primary-button-background-color);
-                      color: var(--primary-button-text-color-hover) !important;
-                      padding: 0.3rem;
-                      transition: $transition-time;
-
-                      &:hover {
-                        @include hoverButton();
-                      }
-                    }
-                    a {
-                      color: var(--primary-button-text-color) !important;
-                    }
-                  }
-
-                  li.jump {
-                    a {
-                    }
-                  }
-                }
-              }
-
-              input {
-              }
+            input {
             }
           }
         }
@@ -362,3 +363,4 @@ form#formWiadomosci {
     }
   }
 }
+// }

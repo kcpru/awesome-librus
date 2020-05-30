@@ -1,44 +1,41 @@
-div.container.static {
+div.container-background {
+  table.decorated.big.center.printable.margin-top {
+    font-size: 1rem;
+    overflow: hidden;
+    border-radius: $border-radius;
 
-  div.container-background {
-    table.decorated.big.center.printable.margin-top {
-      font-size: 1rem;
-      overflow: hidden;
-      border-radius: $border-radius;
+	td,
+    th {
+      border: none;
+      background: var(--primary-background-color) !important;
+    }
 
-      td,
-      th {
-        border: none;
-        background: var(--primary-background-color) !important;
-      }
-
-      thead {
-        tr {
-          td {
-            font-weight: bold;
-            padding: 1rem 0;
-            font-size: 0.9rem;
-            background: var(--primary-background-color) !important;
-          }
+    thead {
+      tr {
+        td {
+          font-weight: bold;
+          padding: 1rem 0;
+          font-size: 0.9rem;
+          background: var(--primary-background-color) !important;
         }
       }
+    }
 
-      tbody {
-        tr {
-          th {
-            font-weight: bold;
-          }
+    tbody {
+      tr {
+        th {
+          font-weight: bold;
+        }
 
-          td {
-          }
+        td {
         }
       }
+    }
 
-      tfoot {
-        tr {
-          td {
-            background: var(--primary-background-color) !important;
-          }
+    tfoot {
+      tr {
+        td {
+          background: var(--primary-background-color) !important;
         }
       }
     }
