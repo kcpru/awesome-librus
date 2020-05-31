@@ -29,14 +29,6 @@ span.fold-start {
   background: none !important;
 }
 
-span.button-start,
-span.fold-start {
-  display: block;
-  &:hover {
-    @include hoverButton();
-  }
-}
-
 button,
 input[type='button'],
 input[type='submit'],
@@ -53,6 +45,16 @@ span.fold-start {
   background: var(--primary-button-background-color);
   color: var(--primary-button-text-color) !important;
   transition: $transition-time;
+}
+
+span.button-start,
+span.fold-start {
+  display: block;
+  padding: 0 1rem !important;
+
+  &:hover {
+    @include hoverButton();
+  }
 }
 
 button,
