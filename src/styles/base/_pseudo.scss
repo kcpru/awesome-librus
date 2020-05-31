@@ -1,0 +1,25 @@
+/* width */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+}
+
+/* Selection */
+::-moz-selection {
+  color: var(--primary-button-text-color-hover);
+  background: var(--primary-button-background-color-hover);
+}
+
+::selection {
+  color: var(--primary-button-text-color-hover);
+  background: var(--primary-button-background-color-hover);
+}
