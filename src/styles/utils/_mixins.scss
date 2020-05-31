@@ -1,6 +1,6 @@
 @mixin hoverButton() {
   background: var(--primary-button-background-color-hover) !important;
-  box-shadow: 0 0.2rem 1rem -0.4rem var(--primary-button-background-color-hover) !important;
+  box-shadow: var(--primary-button-shadow) !important;
   color: var(--primary-button-text-color-hover) !important;
 }
 
@@ -37,11 +37,12 @@
   }
 }
 
-@mixin defaultTheme(
+@mixin theme(
   $primary-color,
   $primary-background-color,
   $primary-text-color,
-  $secondary-background-color
+  $secondary-background-color,
+  $shadow: true
 ) {
   --primary-color: #{$primary-color};
   --primary-background-color: #{$primary-background-color};
@@ -59,6 +60,13 @@
   --secondary-button-text-color: #{$primary-text-color};
   --secondary-button-background-color-hover: #{$primary-text-color};
   --secondary-button-text-color-hover: #{$secondary-background-color};
+
+  // Box shadow
+  @if $shadow {
+    --primary-button-shadow: 0 0.2rem 1rem -0.4rem var(--primary-button-background-color-hover);
+  } @else {
+    --primary-button-shadow: none;
+  }
 
   // Other
   --accent-1: #ea2a56;

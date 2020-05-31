@@ -79,6 +79,7 @@ div#header {
           flex: 1;
           font-weight: bold;
           text-align: center;
+          position: relative;
 
           a {
             font-size: 0.8rem !important;
@@ -104,15 +105,18 @@ div#header {
             }
           }
 
-          //?
-          //   .counter {
-          //     display: block;
-          //     font-weight: bold;
-          //     border-radius: $border-radius !important;
-          //     padding: 0.1rem 0.5rem !important;
-          //     font-size: 0.8rem !important;
-          //     background: var(--accent-3) !important;
-          //   }
+          // Notification counter
+          .button.counter.blue {
+            display: block;
+            font-weight: bold;
+            border-radius: $border-radius !important;
+            padding: 0.2rem 0.6rem !important;
+            font-size: 0.8rem !important;
+            background: var(--primary-button-background-color-hover) !important;
+            color: var(--primary-button-text-color-hover) !important;
+            position: absolute;
+            top: 0.3rem;
+          }
         }
       }
     }

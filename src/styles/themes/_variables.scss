@@ -1,38 +1,72 @@
-/* 
- @include defaultTheme(
-   --primary-color,
-   --primary-background-color,
-   --primary-text-color,
-   --secondary-background-color:
- );
+/*
+@include theme(
+  --primary-color,              -> color
+  --primary-background-color,   -> color
+  --primary-text-color,         -> color
+  --secondary-background-color, -> color
+  --primary-button-shadow       -> bool     (default: true)
+);
 */
 
 .light {
-  @include defaultTheme(#e96d71, #ffffff, #1a242d, #e96d7120);
+  @include theme(
+    #e96d71,
+    #ffffff,
+    #1a242d,
+    #e96d7120
+  );
 }
 
 .light-blue {
-  @include defaultTheme(#736efe, #ffffff, #1a242d, #736efe20);
+  @include theme(
+    #736efe,
+    #ffffff,
+    #1a242d,
+    #736efe20
+  );
 }
 
 .light-green {
-  @include defaultTheme(#28c76f, #ffffff, #1a242d, #28c76f20);
+  @include theme(
+    #28c76f,
+    #ffffff,
+    #1a242d,
+    #28c76f20
+  );
 }
 
 .light-pink {
-  @include defaultTheme(#c32bac, #ffffff, #1a242d, #c32bac20);
+  @include theme(
+    #c32bac,
+    #ffffff,
+    #1a242d,
+    #c32bac20
+  );
 }
 
 .dark-violet {
-  @include defaultTheme(#d6aae0, #360940, #e4bfec, #1e0524);
+  @include theme(#d6aae0, #360940, #e4bfec, #1e0524, false);
 }
 
 .dark-blue {
-  @include defaultTheme(#736efe, #1a242d, #f3f4f6, #0e1318);
+  @include theme(#736efe, #1a242d, #f3f4f6, #0e1318, false);
+}
+
+.dark {
+  @include theme(#f7f7f7, #222222, #f7f7f7, #161616, false);
+}
+
+.amoled {
+  @include theme(#b8b8b8, #181818, #eeeeee, #000000, false);
 }
 
 .mono {
-  @include defaultTheme(#838383, #ffffff, #272727, #e6e6e6);
+  @include theme(
+    #838383,
+    #ffffff,
+    #272727,
+    #e6e6e6
+  );
 
   span,
   p,
@@ -40,12 +74,4 @@
   a {
     filter: grayscale(100%);
   }
-}
-
-.dark {
-  @include defaultTheme(#f7f7f7, #222222, #f7f7f7, #161616);
-}
-
-.amoled {
-  @include defaultTheme(#b8b8b8, #181818, #eeeeee, #000000);
 }
