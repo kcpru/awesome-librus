@@ -13,8 +13,8 @@
   "content_scripts": [
     {
       "matches": ["https://synergia.librus.pl/*"],
-      "js": ["main.bundle.js", "runtime.bundle.js"],
-      "css": ["content.css"]
+      "js": ["main.bundle.js"],
+      "css": ["styles/main.css"]
     }
   ],
   "web_accessible_resources": ["assets/*"]

@@ -1,43 +1,44 @@
 const paths = require('./paths')
-const webpack = require('webpack')
 const merge = require('webpack-merge')
 const common = require('./webpack.common.js')
+const ExtensionReloader = require('webpack-extension-reloader')
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 module.exports = merge(common, {
-  /**
-   * Mode
-   *
-   * Set the mode to development or production.
-   */
   mode: 'development',
-
-  /**
-   * Devtool
-   *
-   * Control how source maps are generated.
-   */
-  devtool: 'inline-source-map',
-
-  /**
-   * DevServer
-   *
-   * Spin up a server for quick development.
-   */
-  devServer: {
-    historyApiFallback: true,
-    contentBase: paths.build,
-    open: true,
-    compress: true,
-    hot: true,
-    port: 8080,
-  },
-
+  watch: true,
+  //...
   plugins: [
-    /**
-     * HotModuleReplacementPlugin
-     *
-     * Only update what has changed.
-     */
-    new webpack.HotModuleReplacementPlugin(),
+    new ExtractTextPlugin({
+      filename: './styles/[name].css',
+      allChunks: true,
+    }),
+    new CopyWebpackPlugin([
+      {
+        from: paths.static,
+        to: 'assets',
+        ignore: ['*.DS_Store'],
+      },
+      {
+        from: paths.manifest,
+        to: './',
+      },
+    ]),
+    new ExtensionReloader({
+      port: 9090,
+      reloadPage: true,
+      entries: {
+        contentScript: 'main',
+      },
+    }),
   ],
+  module: {
+    rules: [
+      {
+        test: /\.(scss|css)$/,
+        loader: ExtractTextPlugin.extract(['css-loader', 'sass-loader']),
+      },
+    ],
+  },
 })

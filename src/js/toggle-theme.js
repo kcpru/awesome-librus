@@ -48,3 +48,4 @@ class ToggleTheme {
 }
 
 export default ToggleTheme
+
