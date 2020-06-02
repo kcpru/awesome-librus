@@ -35,6 +35,15 @@
   );
 }
 
+.light-violet {
+  @include theme(
+    #BC78EC,
+    #ffffff,
+    #1a242d,
+    #BC78EC20
+  );
+}
+
 .light-pink {
   @include theme(
     #c32bac,
@@ -44,12 +53,17 @@
   );
 }
 
+
 .dark-violet {
   @include theme(#d6aae0, #360940, #e4bfec, #1e0524, false);
 }
 
 .dark-blue {
   @include theme( #4da8f8, #1a242d, #f3f4f6, #0e1318, false);
+}
+
+.dark-green {
+  @include theme(#28c76f, #18271f, #eef1f0, #0f1813, false);
 }
 
 .dark {
