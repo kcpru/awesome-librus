@@ -2,6 +2,10 @@
 
 Librus on steroids 💪🏼
 
+## Download
+
+[Download zip](https://github.com/kcpru/awesome-librus/raw/master/zip/awesome-librus.zip)
+
 ## 🔌 Installation
 
 ```
@@ -16,6 +20,7 @@ npm i
 ```bash
 npm start
 ```
+
 You can view the deploy in `dist`.
 
 ### Production build
