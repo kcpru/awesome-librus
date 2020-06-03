@@ -1,7 +1,7 @@
 import $ from 'jquery'
 import Cookies from 'js-cookie'
 
-class ToggleTheme {
+class Theme {
   constructor({ theme }) {
     this.theme = theme
     this.body = $('body')
@@ -42,10 +42,9 @@ class ToggleTheme {
           <select name="theme" id="theme">
             ${options}
           </select>
-        </div>`
+      </div>`
     )
   }
 }
 
-export default ToggleTheme
-
+export default Theme

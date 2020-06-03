@@ -8,7 +8,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin')
 module.exports = merge(common, {
   mode: 'development',
   watch: true,
-  //...
+
   plugins: [
     new ExtractTextPlugin({
       filename: './styles/[name].css',
@@ -25,6 +25,7 @@ module.exports = merge(common, {
         to: './',
       },
     ]),
+    // Hot reload
     new ExtensionReloader({
       port: 9090,
       reloadPage: true,

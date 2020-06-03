@@ -1,10 +1,10 @@
 import router from './js/router'
 import addFonts from './js/fonts'
-import ToggleTheme from './js/toggle-theme'
+import Themes from './js/themes'
 
 import './styles/main.scss'
 
-const toggle = new ToggleTheme({
+new Themes({
   theme: [
     { name: 'Light', value: 'light' },
     { name: 'Light blue', value: 'light-blue' },
