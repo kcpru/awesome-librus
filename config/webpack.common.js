@@ -47,10 +47,20 @@ module.exports = {
           'style-loader',
           {
             loader: 'css-loader',
-            options: { sourceMap: true, importLoaders: 1 },
+            options: {
+              sourceMap: true,
+              importLoaders: 1,
+            },
           },
           { loader: 'postcss-loader', options: { sourceMap: true } },
-          { loader: 'sass-loader', options: { sourceMap: true } },
+          {
+            loader: 'sass-loader',
+            options: {
+              sourceMap: true,
+              implementation: require('sass'),
+              webpackImporter: false, // dart-sass
+            },
+          },
         ],
       },
       // Images
