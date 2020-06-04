@@ -1,7 +1,8 @@
 const paths = require('./paths')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
+// const HtmlWebpackPlugin = require('html-webpack-plugin')
+const autoprefixer = require('autoprefixer');
 
 module.exports = {
   entry: [paths.src + '/index.js'],
@@ -52,13 +53,15 @@ module.exports = {
               importLoaders: 1,
             },
           },
-          { loader: 'postcss-loader', options: { sourceMap: true } },
+          {
+            loader: 'postcss-loader',
+            options: { plugins: () => [autoprefixer()], sourceMap: true },
+          },
           {
             loader: 'sass-loader',
             options: {
               sourceMap: true,
-              implementation: require('sass'),
-              webpackImporter: false, // dart-sass
+              implementation: require('sass'), // dart-sass
             },
           },
         ],
