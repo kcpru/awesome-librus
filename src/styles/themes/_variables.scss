@@ -53,6 +53,9 @@
   );
 }
 
+.dark-red {
+  @include theme( #f84d4d, #2d1a1a, #f6f3f3, #180e0e, false);
+}
 
 .dark-violet {
   @include theme(#d6aae0, #360940, #e4bfec, #1e0524, false);

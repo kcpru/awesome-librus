@@ -12,6 +12,7 @@ new Themes({
     { name: 'Light pink', value: 'light-pink' },
     { name: 'Light violet', value: 'light-violet' },
     { name: 'Dark', value: 'dark' },
+    { name: 'Dark red', value: 'dark-red' },
     { name: 'Dark blue', value: 'dark-blue' },
     { name: 'Dark green', value: 'dark-green' },
     { name: 'Dark violet', value: 'dark-violet' },
