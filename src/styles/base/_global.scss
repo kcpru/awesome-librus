@@ -35,7 +35,7 @@ span.fold-start {
   height: auto !important;
   padding: 0.5rem !important;
   border-radius: $border-radius !important;
-  background: var(--primary-button-background-color);
+  background: var(--primary-button-background-color) !important;
   color: var(--primary-button-text-color) !important;
   transition: $transition-time;
 }

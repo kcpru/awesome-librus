@@ -1,6 +1,26 @@
 form[name='formularzAlias'],
 form[name='formularzZmianaHasla'],
 form[name='formularzDaneKonta'] {
+  table {
+    margin-top: 0 !important;
+    background: var(--primary-background-color) !important;
+    box-shadow: none;
+    padding: 1rem;
+
+    td,
+    th {
+      border: none !important;
+      background: var(--primary-background-color) !important;
+    }
+    th,
+    thead {
+      font-weight: bold;
+    }
+
+    input {
+        padding: 0.2rem 1rem !important;
+    }
+  }
 }
 
 div.warning-box.question.draggable.small.ui-draggable {
