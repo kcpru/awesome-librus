@@ -29,6 +29,7 @@ div#header {
               color: var(--primary-text-color) !important;
               opacity: 1 !important;
               box-shadow: 0 0.5rem 1rem -0.2rem #00000049;
+              backdrop-filter: blur(0.4rem);
 
               li {
                 border-radius: $border-radius;
