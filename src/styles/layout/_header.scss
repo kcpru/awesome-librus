@@ -62,7 +62,9 @@ div#header {
       z-index: 999;
       height: auto !important;
       box-shadow: 0 1rem 2rem -0.3rem #00000020;
-      background: var(--primary-background-color);
+      // background: var(--primary-background-color);
+      background: none;
+      backdrop-filter: blur(1rem);
 
       ul {
         display: flex;
