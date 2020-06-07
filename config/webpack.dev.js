@@ -11,7 +11,7 @@ module.exports = merge(common, {
 
   plugins: [
     new ExtractTextPlugin({
-      filename: './styles/[name].css',
+      filename: '[name]/[name].css',
       allChunks: true,
     }),
     new CopyWebpackPlugin([
@@ -21,7 +21,7 @@ module.exports = merge(common, {
         ignore: ['*.DS_Store'],
       },
       {
-        from: paths.manifest,
+        from: paths.src + '/manifest.json',
         to: './',
       },
     ]),
@@ -30,7 +30,8 @@ module.exports = merge(common, {
       port: 9090,
       reloadPage: true,
       entries: {
-        contentScript: 'main',
+        contentScript: 'content',
+        extensionPage: ['popup', 'options'],
       },
     }),
   ],

@@ -1,14 +1,18 @@
 const paths = require('./paths')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
-// const HtmlWebpackPlugin = require('html-webpack-plugin')
-const autoprefixer = require('autoprefixer');
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const autoprefixer = require('autoprefixer')
 
 module.exports = {
-  entry: [paths.src + '/index.js'],
+  entry: {
+    content: paths.src + '/content/content.js',
+    options: paths.src + '/options/options.js',
+    popup: paths.src + '/popup/popup.js',
+  },
   output: {
     path: paths.build,
-    filename: '[name].bundle.js',
+    filename: '[name]/[name].bundle.js',
     publicPath: '/',
   },
 
@@ -21,17 +25,22 @@ module.exports = {
         ignore: ['*.DS_Store'],
       },
       {
-        from: paths.manifest,
+        from: paths.src + '/manifest.json',
         to: './',
       },
     ]),
 
-    // new HtmlWebpackPlugin({
-    //   title: 'Awesome Librus',
-    //   favicon: paths.static + '/favicon.png',
-    //   template: paths.src + '/template.html', // template file
-    //   filename: 'index.html', // output file
-    // }),
+    new HtmlWebpackPlugin({
+      template: paths.src + '/options/options.html',
+      filename: 'options/options.html',
+      chunks: ['options'],
+    }),
+
+    new HtmlWebpackPlugin({
+      template: paths.src + '/popup/popup.html',
+      filename: 'popup/popup.html',
+      chunks: ['popup'],
+    }),
   ],
   module: {
     rules: [
