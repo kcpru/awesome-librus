@@ -2,7 +2,7 @@ import router from './js/router'
 import addFonts from './js/fonts'
 import Themes from './js/themes'
 
-import './styles/main.scss'
+import './styles/content.scss'
 
 new Themes({
   theme: [

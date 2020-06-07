@@ -11,12 +11,12 @@ module.exports = merge(common, {
   devtool: false,
   output: {
     path: paths.build,
-    filename: '[name].bundle.js',
+    filename: '[name]/[name].bundle.js',
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: 'styles/[name].css',
-      chunkFilename: 'content.css',
+      filename: '[name]/[name].css',
+      chunkFilename: '[name].css',
     }),
 
     new ZipPlugin({
