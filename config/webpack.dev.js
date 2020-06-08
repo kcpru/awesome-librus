@@ -8,6 +8,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin')
 module.exports = merge(common, {
   mode: 'development',
   watch: true,
+  devtool: 'cheap-module-source-map',
 
   plugins: [
     new ExtractTextPlugin({

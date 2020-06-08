@@ -3,7 +3,7 @@ import './options.scss'
 function save_options() {
   var borderRadius = document.getElementById('border-radius').value
   var theme = document.getElementById('theme').checked
-  chrome.storage.locale.set(
+  chrome.storage.sync.set(
     {
       borderRadius: borderRadius,
       theme: theme,
@@ -22,7 +22,7 @@ function save_options() {
 // stored in chrome.storage.
 function restore_options() {
   // Use default value color = 'red' and likesColor = true.
-  chrome.storage.locale.get(
+  chrome.storage.sync.get(
     {
       borderRadius: 'red',
       theme: theme,
