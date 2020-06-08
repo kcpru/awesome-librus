@@ -1,12 +1,12 @@
 import './options.scss'
 // Saves options to chrome.storage
 function save_options() {
-  var color = document.getElementById('color').value
-  var likesColor = document.getElementById('like').checked
-  chrome.storage.sync.set(
+  var borderRadius = document.getElementById('border-radius').value
+  var theme = document.getElementById('theme').checked
+  chrome.storage.locale.set(
     {
-      favoriteColor: color,
-      likesColor: likesColor,
+      borderRadius: borderRadius,
+      theme: theme,
     },
     function () {
       // Update status to let user know options were saved.
@@ -22,14 +22,14 @@ function save_options() {
 // stored in chrome.storage.
 function restore_options() {
   // Use default value color = 'red' and likesColor = true.
-  chrome.storage.sync.get(
+  chrome.storage.locale.get(
     {
-      favoriteColor: 'red',
-      likesColor: true,
+      borderRadius: 'red',
+      theme: theme,
     },
     function (items) {
-      document.getElementById('color').value = items.favoriteColor
-      document.getElementById('like').checked = items.likesColor
+      document.getElementById('border-radius').value = items.favoriteColor
+      document.getElementById('theme').checked = items.likesColor
     }
   )
 }

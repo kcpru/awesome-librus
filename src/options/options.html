@@ -5,17 +5,20 @@
   </head>
 
   <body>
-    Kolor:
-    <select id="color">
-      <option value="red">red</option>
-      <option value="green">green</option>
-      <option value="blue">blue</option>
-      <option value="yellow">yellow</option>
+    Motyw:
+    <select id="themes">
+      <option value="red">Light</option>
+      <option value="green">Light blue</option>
+      <option value="blue">Light green</option>
+      <option value="yellow">Dark</option>
+      <option value="yellow">Dark blue</option>
+      <option value="yellow">Dark green</option>
+      <option value="yellow">Amoled</option>
+      <option value="yellow">Mono</option>
     </select>
 
     <label>
-      <input type="checkbox" id="like" />
-      I like colors.
+      <input type="range" min="1" max="5" value="5" id="border-radius" />
     </label>
 
     <div id="status"></div>
