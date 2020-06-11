@@ -6,21 +6,31 @@ class Theme {
     this.theme = theme
     this.body = $('body')
 
-    this.themeName = Cookies.get('theme') ? Cookies.get('theme') : 'light'
+    this.themeName
+    this.init()
 
     this.appendSelect()
 
     this.toggle = $('#toggle-theme')
-    this.toggleTheme()
+    // this.toggleTheme()
   }
 
-  toggleTheme() {
-    this.setTheme(this.themeName)
+  init() {
+    chrome.storage.sync.get(['theme'], (items) => {
+      this.themeName = items.theme
+      console.log(items.theme, this.themeName)
 
-    this.toggle.change(() => {
-      this.setTheme(this.toggle.find(':selected').val())
+      this.setTheme(this.themeName)
     })
   }
+
+  // toggleTheme() {
+  //   this.setTheme(this.themeName)
+
+  //   this.toggle.change(() => {
+  //     this.setTheme(this.toggle.find(':selected').val())
+  //   })
+  // }
 
   setTheme(className) {
     this.body.removeClass().addClass(className)
@@ -30,20 +40,20 @@ class Theme {
 
   appendSelect() {
     const options = this.theme.map(
-      ({ name, value }) =>
-        `<option value="${value}" ${
-          value === this.themeName && `selected`
-        }>${name}</option>`
+      ({ name, value }) => `<option value="${value}">${name}</option>`
     )
 
-    $('#user-section').append(
-      `<div id="toggle-theme">
-          <label for="theme">Motyw</label>
-          <select name="theme" id="theme">
-            ${options}
-          </select>
-      </div>`
-    )
+    chrome.storage.sync.get(['theme'], (items) => {
+      $('#user-section').append(
+        `<div id="toggle-theme">
+              <label for="theme">Motyw</label>
+              <select name="theme" id="theme">
+                ${options}
+              </select>
+          </div>`
+      )
+      $('#theme').val(items.theme)
+    })
   }
 }
 
