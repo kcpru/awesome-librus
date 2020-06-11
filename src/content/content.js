@@ -3,7 +3,7 @@ import addFonts from './js/fonts'
 import Themes from './js/themes'
 
 import './styles/content.scss'
-
+//TODO Move to options.js
 new Themes({
   theme: [
     { name: 'Light', value: 'light' },
