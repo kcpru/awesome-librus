@@ -27,3 +27,4 @@
   "web_accessible_resources": ["assets/*"],
   "permissions": ["storage", "https://*/*"]
 }
+
