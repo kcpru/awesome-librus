@@ -2,27 +2,29 @@ import $ from 'jquery'
 
 import './options.scss'
 
+const API = chrome || browser
+
 const save_options = () => {
   const borderRadius = $('#border-radius').val(),
-    theme = $('#theme').val()
+    theme = $('#theme').val(),
+    status = $('#status')
 
-  chrome.storage.sync.set(
+  API.storage.local.set(
     {
       borderRadius,
       theme,
     },
     () => {
-      const status = $('#status')
       status.text('Options saved.')
-      setTimeout(function () {
+      setTimeout(() => {
         status.textContent = ''
-      }, 750)
+      }, 1000)
     }
   )
 }
 
 const restore_options = () => {
-  chrome.storage.sync.get(
+  API.storage.local.get(
     ['theme', 'borderRadius'],
 
     (items) => {
