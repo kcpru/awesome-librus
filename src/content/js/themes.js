@@ -5,18 +5,20 @@ class Theme {
   constructor({ theme }) {
     this.body = $('body')
 
+    this.API = chrome || browser
+
     this.themeName
     this.init()
   }
 
   init() {
-    chrome.storage.sync.get(['theme'], (items) => {
+    this.API.storage.local.get(['theme'], (items) => {
       this.themeName = items.theme
-      console.log(items.theme, this.themeName)
 
       this.setTheme(this.themeName)
     })
   }
+
   setTheme(className) {
     this.body.removeClass().addClass(className)
     this.themeName = className

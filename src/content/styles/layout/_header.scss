@@ -54,6 +54,7 @@ div#header {
       #top-banner {
       }
     }
+
     #graphic-menu {
       position: fixed !important;
       top: 0;
@@ -63,9 +64,7 @@ div#header {
       z-index: 999;
       height: auto !important;
       box-shadow: 0 1rem 2rem -0.3rem #00000020;
-      // background: var(--primary-background-color);
-      background: none;
-      backdrop-filter: blur(1rem);
+      background: var(--primary-background-color);
 
       ul {
         display: flex;
@@ -121,6 +120,14 @@ div#header {
             top: 0.3rem;
           }
         }
+      }
+    }
+    @supports (
+      (-webkit-backdrop-filter: blur(1rem)) or (backdrop-filter: blur(1rem))
+    ) {
+      #graphic-menu {
+        background: none !important;
+        backdrop-filter: blur(1rem);
       }
     }
   }
