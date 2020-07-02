@@ -1,5 +1,4 @@
 import $ from 'jquery'
-import Cookies from 'js-cookie'
 
 class Theme {
   constructor({ theme }) {
@@ -22,7 +21,6 @@ class Theme {
   setTheme(className) {
     this.body.removeClass().addClass(className)
     this.themeName = className
-    Cookies.set('theme', this.themeName)
   }
 }
 
