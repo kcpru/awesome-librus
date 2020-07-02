@@ -15,7 +15,7 @@ const save_options = () => {
       theme,
     },
     () => {
-      status.text('Options saved.')
+      status.text('Zapisano pomyślnie.')
       setTimeout(() => {
         status.textContent = ''
       }, 1000)
