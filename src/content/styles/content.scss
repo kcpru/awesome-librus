@@ -3,7 +3,8 @@
 @import 'utils/mixins';
 @import 'utils/variables';
 
-@import 'themes/variables';
+@import 'options/themes';
+@import 'options/border-radius';
 
 @import 'base/global';
 @import 'base/pseudo';

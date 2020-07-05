@@ -23,7 +23,7 @@ form[name='PrzegladajOceny'] {
         > table {
           background: var(--primary-background-color);
           margin: 1rem 0;
-          border-radius: $border-radius;
+          border-radius: var(--border-radius);
           table.right {
             padding: 0.5rem;
           }
@@ -85,7 +85,7 @@ form[name='PrzegladajOceny'] {
         .grade-box {
           color: #333333 !important;
           padding: 0.3rem;
-          border-radius: $border-radius;
+          border-radius: var(--border-radius);
           font-weight: bold;
           margin: 0.3rem !important;
           a {

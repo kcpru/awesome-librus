@@ -25,14 +25,14 @@ div#header {
               padding: 1rem;
               border: none;
               background: var(--primary-button-background-color) !important;
-              border-radius: 0 0 $border-radius $border-radius !important;
+              border-radius: 0 0 var(--border-radius) var(--border-radius) !important;
               color: var(--primary-text-color) !important;
               opacity: 1 !important;
               box-shadow: 0 0.5rem 1rem -0.2rem #00000049;
               backdrop-filter: blur(0.4rem);
 
               li {
-                border-radius: $border-radius;
+                border-radius: var(--border-radius);
                 &:hover {
                   background: transparent !important;
                 }
@@ -88,7 +88,7 @@ div#header {
             height: 2rem;
             background: var(--primary-button-background-color) !important;
             color: var(--primary-button-text-color) !important;
-            border-radius: $border-radius;
+            border-radius: var(--border-radius);
             padding: 0.1rem 1rem !important;
             display: block;
             flex: 1;
@@ -111,7 +111,7 @@ div#header {
           .button.counter {
             display: block;
             font-weight: bold;
-            border-radius: $border-radius !important;
+            border-radius: var(--border-radius) !important;
             padding: 0.2rem 0.6rem !important;
             font-size: 0.8rem !important;
             background: var(--primary-button-background-color-hover) !important;
@@ -144,7 +144,7 @@ div#header {
       background: var(--accent-3);
       color: var(--primary-button-text-color);
       padding: 0.4rem;
-      border-radius: $border-radius;
+      border-radius: var(--border-radius);
 
       // position: fixed;
       // top: 0;

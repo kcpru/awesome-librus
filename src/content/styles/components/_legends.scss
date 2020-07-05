@@ -20,7 +20,7 @@
           width: auto;
           padding: 0.5rem;
           margin: 0.3rem;
-          border-radius: $border-radius;
+          border-radius: var(--border-radius);
           background: var(--primary-background-color) !important;
           font-weight: bold;
         }

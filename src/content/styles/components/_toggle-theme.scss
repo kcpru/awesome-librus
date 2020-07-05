@@ -1,7 +1,6 @@
-
 #toggle-theme {
   padding: 0.9rem 1rem;
-  border-radius: $border-radius;
+  border-radius: var(--border-radius);
   background: var(--primary-background-color);
   display: inline-block;
 
