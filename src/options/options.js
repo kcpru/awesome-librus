@@ -3,13 +3,14 @@ import $ from 'jquery'
 import './options.scss'
 
 const API = chrome || browser
+const storage = API.storage.local
 
 const save_options = () => {
   const borderRadius = $('#border-radius').val(),
     theme = $('#theme').val(),
     status = $('#status')
 
-  API.storage.local.set(
+  storage.set(
     {
       borderRadius,
       theme,
@@ -24,7 +25,7 @@ const save_options = () => {
 }
 
 const restore_options = () => {
-  API.storage.local.get(
+  storage.get(
     ['theme', 'borderRadius'],
 
     (items) => {

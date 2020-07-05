@@ -2,13 +2,13 @@ class AwesomeLibrus {
   constructor() {
     this.body = document.querySelector('body')
     this.API = chrome || browser
+    this.storage = this.API.storage.local
     this.init()
   }
 
   init() {
-    this.API.storage.local.get(['theme', 'borderRadius'], (items) => {
+    this.storage.get(['theme', 'borderRadius'], (items) => {
       this.setOptions(items.theme, items.borderRadius)
-      console.log(items)
     })
   }
 
