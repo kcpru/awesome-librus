@@ -1,11 +1,7 @@
-import $ from 'jquery'
-
 class AwesomeLibrus {
   constructor() {
-    this.body = $('body')
-
+    this.body = document.querySelector('body')
     this.API = chrome || browser
-
     this.init()
   }
 
@@ -17,9 +13,8 @@ class AwesomeLibrus {
   }
 
   setOptions(className, borderRadius) {
-    this.body
-      .removeClass()
-      .addClass([className, `border-radius-${borderRadius}`])
+    this.body.classList = ''
+    this.body.classList.add(className, `border-radius-${borderRadius}`)
   }
 }
 
