@@ -2,6 +2,8 @@
 
 Librus on steroids 💪🏼
 
+![GitHub Logo](/awesome-librus.gif)
+
 ## Download
 
 [Download zip](https://github.com/kcpru/awesome-librus/raw/master/zip/awesome-librus.zip)
@@ -28,6 +30,7 @@ You can view the deploy in `dist`.
 ```bash
 npm run build
 ```
+
 
 You can view the deploy in `zip`.
 
