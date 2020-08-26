@@ -39,7 +39,7 @@ module.exports = merge(common, {
   module: {
     rules: [
       {
-        test: /\.(scss|css)$/,
+        test: /\.s?css$/,
         loader: ExtractTextPlugin.extract(['css-loader', 'sass-loader']),
       },
     ],

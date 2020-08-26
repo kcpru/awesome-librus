@@ -2,6 +2,7 @@ const paths = require('./paths')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const autoprefixer = require('autoprefixer')
 
 module.exports = {
@@ -9,11 +10,31 @@ module.exports = {
     content: paths.src + '/content/content.js',
     options: paths.src + '/options/options.js',
     popup: paths.src + '/popup/popup.js',
+    css: paths.src + '/content/css.js',
   },
   output: {
     path: paths.build,
     filename: '[name]/[name].bundle.js',
     publicPath: '/',
+  },
+
+  optimization: {
+    splitChunks: {
+      cacheGroups: {
+        dodatkowy1: {
+          name: 'dodatkowy1',
+          test: /dodatkowy1\.s?css$/,
+          chunks: 'all',
+          enforce: true,
+        },
+        dodatkowy2: {
+          name: 'dodatkowy2',
+          test: /dodatkowy2\.s?css$/,
+          chunks: 'all',
+          enforce: true,
+        },
+      },
+    },
   },
 
   plugins: [
@@ -41,6 +62,10 @@ module.exports = {
       filename: 'popup/popup.html',
       chunks: ['popup'],
     }),
+    new MiniCssExtractPlugin({
+      filename: '[name]/[name].XDD-filename.css',
+      chunkFilename: '[name].XDD-chunk.css',
+    }),
   ],
   module: {
     rules: [
@@ -52,13 +77,12 @@ module.exports = {
       },
       // Styles
       {
-        test: /\.(scss|css)$/,
+        test: /\.s?css$/,
         use: [
-          'style-loader',
+          MiniCssExtractPlugin.loader,
           {
             loader: 'css-loader',
             options: {
-              sourceMap: true,
               importLoaders: 1,
             },
           },
@@ -66,13 +90,7 @@ module.exports = {
             loader: 'postcss-loader',
             options: { plugins: () => [autoprefixer()], sourceMap: true },
           },
-          {
-            loader: 'sass-loader',
-            options: {
-              sourceMap: true,
-              implementation: require('sass'), // dart-sass
-            },
-          },
+          'sass-loader',
         ],
       },
       // Images
@@ -84,16 +102,6 @@ module.exports = {
           context: 'src',
         },
       },
-      // Fonts
-      // {
-      //   test: /\.(woff(2)?|eot|ttf|otf|)$/,
-      //   loader: 'url-loader',
-      //   options: {
-      //     limit: 8192,
-      //     name: '[path][name].[ext]',
-      //     context: 'src',
-      //   },
-      // },
     ],
   },
 }

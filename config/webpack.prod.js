@@ -14,11 +14,6 @@ module.exports = merge(common, {
     filename: '[name]/[name].bundle.js',
   },
   plugins: [
-    new MiniCssExtractPlugin({
-      filename: '[name]/[name].css',
-      chunkFilename: '[name].css',
-    }),
-
     new ZipPlugin({
       path: '../zip',
       filename: 'awesome-librus.zip',
@@ -26,23 +21,23 @@ module.exports = merge(common, {
   ],
   module: {
     rules: [
-      {
-        test: /\.(scss|css)$/,
-        use: [
-          MiniCssExtractPlugin.loader,
-          {
-            loader: 'css-loader',
-            options: {
-              importLoaders: 1,
-            },
-          },
-          'postcss-loader',
-          'sass-loader',
-        ],
-      },
+      // {
+      //   test: /\.(scss|css)$/,
+      //   use: [
+      //     MiniCssExtractPlugin.loader,
+      //     {
+      //       loader: 'css-loader',
+      //       options: {
+      //         importLoaders: 1,
+      //       },
+      //     },
+      //     'postcss-loader',
+      //     'sass-loader',
+      //   ],
+      // },
     ],
   },
-  // Production minimizing of JavaSvript and CSS assets.
+  // Production minimizing of JavaScript and CSS assets.
   optimization: {
     minimizer: [new TerserJSPlugin({}), new OptimizeCSSAssetsPlugin({})],
     splitChunks: {

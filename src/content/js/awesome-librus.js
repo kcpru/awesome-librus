@@ -1,6 +1,6 @@
 class AwesomeLibrus {
   constructor() {
-    this.body = document.querySelector('body')
+    this.body = document.querySelector('html')
     this.API = chrome || browser
     this.storage = this.API.storage.local
 
@@ -9,18 +9,18 @@ class AwesomeLibrus {
   }
 
   init() {
-    this.storage.get(['theme', 'borderRadius'], (items) => {
-      this.setOptions(items.theme, items.borderRadius)
-    })
+    this.storage.get(['theme', 'borderRadius'], (items) =>
+      this.setOptions(items)
+    )
+  }
+
+  setOptions({ theme, borderRadius }) {
+    this.body.classList = ''
+    this.body.classList.add(theme, `border-radius-${borderRadius}`)
   }
 
   onChangeStorage() {
     this.storage.onChanged.addListener(() => this.init())
-  }
-
-  setOptions(className, borderRadius) {
-    this.body.classList = ''
-    this.body.classList.add(className, `border-radius-${borderRadius}`)
   }
 }
 
