@@ -10,33 +10,12 @@ module.exports = {
     content: paths.src + '/content/content.js',
     options: paths.src + '/options/options.js',
     popup: paths.src + '/popup/popup.js',
-    css: paths.src + '/content/css.js',
   },
   output: {
     path: paths.build,
     filename: '[name]/[name].bundle.js',
     publicPath: '/',
   },
-
-  optimization: {
-    splitChunks: {
-      cacheGroups: {
-        dodatkowy1: {
-          name: 'dodatkowy1',
-          test: /dodatkowy1\.s?css$/,
-          chunks: 'all',
-          enforce: true,
-        },
-        dodatkowy2: {
-          name: 'dodatkowy2',
-          test: /dodatkowy2\.s?css$/,
-          chunks: 'all',
-          enforce: true,
-        },
-      },
-    },
-  },
-
   plugins: [
     new CleanWebpackPlugin(),
     new CopyWebpackPlugin([
@@ -50,7 +29,6 @@ module.exports = {
         to: './',
       },
     ]),
-
     new HtmlWebpackPlugin({
       template: paths.src + '/options/options.html',
       filename: 'options/options.html',
@@ -61,10 +39,6 @@ module.exports = {
       template: paths.src + '/popup/popup.html',
       filename: 'popup/popup.html',
       chunks: ['popup'],
-    }),
-    new MiniCssExtractPlugin({
-      filename: '[name]/[name].XDD-filename.css',
-      chunkFilename: '[name].XDD-chunk.css',
     }),
   ],
   module: {

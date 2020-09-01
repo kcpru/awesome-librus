@@ -21,20 +21,20 @@ module.exports = merge(common, {
   ],
   module: {
     rules: [
-      // {
-      //   test: /\.(scss|css)$/,
-      //   use: [
-      //     MiniCssExtractPlugin.loader,
-      //     {
-      //       loader: 'css-loader',
-      //       options: {
-      //         importLoaders: 1,
-      //       },
-      //     },
-      //     'postcss-loader',
-      //     'sass-loader',
-      //   ],
-      // },
+      {
+        test: /\.(scss|css)$/,
+        use: [
+          MiniCssExtractPlugin.loader,
+          {
+            loader: 'css-loader',
+            options: {
+              importLoaders: 1,
+            },
+          },
+          'postcss-loader',
+          'sass-loader',
+        ],
+      },
     ],
   },
   // Production minimizing of JavaScript and CSS assets.
