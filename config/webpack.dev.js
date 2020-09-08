@@ -11,10 +11,6 @@ module.exports = merge(common, {
   devtool: 'cheap-module-source-map',
 
   plugins: [
-    new ExtractTextPlugin({
-      filename: '[name]/[name].css',
-      allChunks: true,
-    }),
     new CopyWebpackPlugin([
       {
         from: paths.static,
@@ -38,10 +34,7 @@ module.exports = merge(common, {
   ],
   module: {
     rules: [
-      {
-        test: /\.s?css$/,
-        loader: ExtractTextPlugin.extract(['css-loader', 'sass-loader']),
-      },
+      
     ],
   },
 })

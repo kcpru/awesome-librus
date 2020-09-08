@@ -13,16 +13,16 @@
   "content_scripts": [
     {
       "matches": ["https://synergia.librus.pl/*"],
-      "js": ["content/content.bundle.js"],
+      "js": ["content.js"],
       "css": ["content.css"]
     }
   ],
   "options_ui": {
-    "page": "options/options.html"
+    "page": "options.html"
   },
   "browser_action": {
     "default_title": "Awesome Librus",
-    "default_popup": "popup/popup.html"
+    "default_popup": "popup.html"
   },
   "web_accessible_resources": ["assets/*"],
   "permissions": ["storage", "https://*/*"]

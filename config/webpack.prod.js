@@ -1,7 +1,6 @@
 const paths = require('./paths')
 const merge = require('webpack-merge')
 const common = require('./webpack.common.js')
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const TerserJSPlugin = require('terser-webpack-plugin')
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 const ZipPlugin = require('zip-webpack-plugin')
@@ -11,7 +10,7 @@ module.exports = merge(common, {
   devtool: false,
   output: {
     path: paths.build,
-    filename: '[name]/[name].bundle.js',
+    filename: '[name].js',
   },
   plugins: [
     new ZipPlugin({

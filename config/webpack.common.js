@@ -13,7 +13,7 @@ module.exports = {
   },
   output: {
     path: paths.build,
-    filename: '[name]/[name].bundle.js',
+    filename: '[name].js',
     publicPath: '/',
   },
   plugins: [
@@ -31,13 +31,13 @@ module.exports = {
     ]),
     new HtmlWebpackPlugin({
       template: paths.src + '/options/options.html',
-      filename: 'options/options.html',
+      filename: 'options.html',
       chunks: ['options'],
     }),
 
     new HtmlWebpackPlugin({
       template: paths.src + '/popup/popup.html',
-      filename: 'popup/popup.html',
+      filename: 'popup.html',
       chunks: ['popup'],
     }),
     new MiniCssExtractPlugin(),
