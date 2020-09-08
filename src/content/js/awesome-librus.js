@@ -1,7 +1,8 @@
 class AwesomeLibrus {
   constructor() {
     this.body = document.querySelector('html')
-    this.API = chrome || browser
+    this.API = chrome
+    // this.API = chrome || browser
     this.storage = this.API.storage.local
 
     this.init()

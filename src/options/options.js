@@ -1,4 +1,4 @@
-import $ from 'jquery'
+import * as $ from 'jquery'
 
 import './options.scss'
 
@@ -28,9 +28,9 @@ const restore_options = () => {
   storage.get(
     ['theme', 'borderRadius'],
 
-    (items) => {
-      $('#border-radius').val(items.borderRadius)
-      $('#theme').val(items.theme)
+    ({ theme, borderRadius }) => {
+      $('#theme').val(theme)
+      $('#border-radius').val(borderRadius)
     }
   )
 }

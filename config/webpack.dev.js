@@ -2,7 +2,6 @@ const paths = require('./paths')
 const merge = require('webpack-merge')
 const common = require('./webpack.common.js')
 const ExtensionReloader = require('webpack-extension-reloader')
-const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 module.exports = merge(common, {
