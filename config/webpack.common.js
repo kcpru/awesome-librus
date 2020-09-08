@@ -40,6 +40,7 @@ module.exports = {
       filename: 'popup/popup.html',
       chunks: ['popup'],
     }),
+    new MiniCssExtractPlugin(),
   ],
   module: {
     rules: [

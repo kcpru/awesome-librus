@@ -14,7 +14,7 @@
     {
       "matches": ["https://synergia.librus.pl/*"],
       "js": ["content/content.bundle.js"],
-      "css": ["content/content.css"]
+      "css": ["content.css"]
     }
   ],
   "options_ui": {
