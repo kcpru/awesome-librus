@@ -9,5 +9,5 @@ import redirect from './js/redirect'
 new AwesomeLibrus()
 
 addFonts()
-router()
+// router()
 redirect()

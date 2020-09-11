@@ -41,6 +41,21 @@
         >Po zalogowaniu przekieruj na alternatywny wygląd</label
       >
       <input type="checkbox" name="redirect" id="redirect" />
+      <label for="theme">Na jaką stronę przekierować</label>
+      <select id="redirect-page">
+        <option value="powiadomienia">Centrum powiadomień</option>
+        <option value="zmiany">Historia zmian</option>
+        <option value="plan-lekcji">Plan lekcji</option>
+        <option value="terminarz">Terminarz</option>
+        <!-- <option value="light-violet">Kartoteka ucznia</option>
+        <option value="dark">Realizacje zajęć</option> -->
+        <option value="zadania-domowe">Zadania domowe</option>
+        <option value="wiadomosci">Wiadomości</option>
+        <option value="ogloszenia">Ogłoszenia</option>
+        <option value="pliki-szkoly">Pliki szkoły</option>
+        <option value="pomoc">Pomoc</option>
+        <option value="mapa-serwisu">Mapa serwisu</option>
+      </select>
 
       <div id="status"></div>
       <button id="save">Zapisz</button>

@@ -8,6 +8,7 @@ const storage = API.storage.local
 const save_options = () => {
   const borderRadius = $('#border-radius').val(),
     theme = $('#theme').val(),
+    redirectPage = $('#redirect-page').val(),
     redirect = $('#redirect').prop('checked'),
     status = $('#status')
 
@@ -16,6 +17,7 @@ const save_options = () => {
       borderRadius,
       theme,
       redirect,
+      redirectPage,
     },
     () => {
       status.text('Zapisano pomyślnie.')
@@ -28,11 +30,12 @@ const save_options = () => {
 
 const restore_options = () => {
   storage.get(
-    ['theme', 'borderRadius', 'redirect'],
+    ['theme', 'borderRadius', 'redirect', 'redirectPage'],
 
-    ({ theme, borderRadius, redirect }) => {
+    ({ theme, borderRadius, redirect, redirectPage }) => {
       $('#theme').val(theme)
       $('#border-radius').val(borderRadius)
+      $('#redirect-page').val(redirectPage)
       $('#redirect').prop('checked', redirect)
     }
   )
