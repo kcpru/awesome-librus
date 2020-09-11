@@ -61,14 +61,14 @@ body {
 }
 
 label,
-input,
+input[type='range'],
 select {
   -webkit-appearance: none;
   display: block;
   width: 100%;
 }
 
-input,
+input[type='range'],
 select,
 button {
   border: none;
