@@ -11,53 +11,73 @@
   </head>
   <body class="light">
     <div class="container">
-      <label for="theme"
-        >Motyw
-        <select id="theme">
-          <option value="light">Light</option>
-          <option value="light-blue">Light blue</option>
-          <option value="light-green">Light green</option>
-          <option value="light-pink">Light pink</option>
-          <option value="light-violet">Light violet</option>
-          <option value="dark">Dark</option>
-          <option value="dark-red">Dark red</option>
-          <option value="dark-blue">Dark blue</option>
-          <option value="dark-green">Dark green</option>
-          <option value="dark-violet">Dark violet</option>
-          <option value="amoled">Amoled</option>
-          <option value="mono">Mono</option>
-        </select>
-      </label>
+      <section id="colors-wrapper">
+        <label class="color-wrapper">
+          <input class="color" type="radio" name="colors" value="red" />
+          <div class="checkmark"></div>
+        </label>
+        <label class="color-wrapper">
+          <input class="color" type="radio" name="colors" value="blue" />
+          <div class="checkmark"></div>
+        </label>
+        <label class="color-wrapper">
+          <input class="color" type="radio" name="colors" value="green" />
+          <div class="checkmark"></div>
+        </label>
+        <label class="color-wrapper">
+          <input class="color" type="radio" name="colors" value="violet" />
+          <div class="checkmark"></div>
+        </label>
+        <label class="color-wrapper">
+          <input class="color" type="radio" name="colors" value="pink" />
+          <div class="checkmark"></div>
+        </label>
+      </section>
 
-      <label for="border-radius"
-        >Zaokrąglenie
-        <input
-          type="range"
-          min="0"
-          max="4"
-          value="4"
-          id="border-radius"
-          class="slider"
-        />
-      </label>
+      <section>
+        <label for="theme"
+          >Motyw
+          <select id="theme">
+            <option value="light">Light</option>
+            <option value="dark">Dark</option>
+          </select>
+        </label>
+      </section>
 
-      <label for="redirect"
-        >Po zalogowaniu przekieruj na alternatywny wygląd
-        <input type="checkbox" name="redirect" id="redirect" />
-        <label for="redirect-page">Na jaką stronę przekierować</label>
-        <select id="redirect-page">
-          <option value="powiadomienia">Centrum powiadomień</option>
-          <option value="zmiany">Historia zmian</option>
-          <option value="plan-lekcji">Plan lekcji</option>
-          <option value="terminarz">Terminarz</option>
-          <option value="zadania-domowe">Zadania domowe</option>
-          <option value="wiadomosci">Wiadomości</option>
-          <option value="ogloszenia">Ogłoszenia</option>
-          <option value="pliki-szkoly">Pliki szkoły</option>
-          <option value="pomoc">Pomoc</option>
-          <option value="mapa-serwisu">Mapa serwisu</option>
-        </select>
-      </label>
+      <section>
+        <label for="border-radius"
+          >Zaokrąglenie
+          <input
+            type="range"
+            min="0"
+            max="4"
+            value="4"
+            id="border-radius"
+            class="slider"
+          />
+        </label>
+      </section>
+
+      <section>
+        <label for="redirect"
+          >Po zalogowaniu przekieruj na alternatywny wygląd
+          <input type="checkbox" name="redirect" id="redirect" />
+          <label for="redirect-page">Na jaką stronę przekierować</label>
+          <select id="redirect-page">
+            <option value="powiadomienia">Centrum powiadomień</option>
+            <option value="zmiany">Historia zmian</option>
+            <option value="plan-lekcji">Plan lekcji</option>
+            <option value="terminarz">Terminarz</option>
+            <option value="zadania-domowe">Zadania domowe</option>
+            <option value="wiadomosci">Wiadomości</option>
+            <option value="ogloszenia">Ogłoszenia</option>
+            <option value="pliki-szkoly">Pliki szkoły</option>
+            <option value="pomoc">Pomoc</option>
+            <option value="mapa-serwisu">Mapa serwisu</option>
+          </select>
+        </label>
+      </section>
+
       <div id="status"></div>
       <button id="save">Zapisz</button>
     </div>

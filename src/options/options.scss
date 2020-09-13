@@ -52,12 +52,12 @@ $transition-time: 0.1s;
 
 body {
   width: 300px;
-  height: 300px;
+  min-height: 300px;
 }
 
 .container {
   margin: auto;
-  width: 200px;
+  width: 300px;
 }
 
 label,
@@ -74,7 +74,7 @@ button {
   border: none;
   height: 2rem;
   box-sizing: border-box;
-  margin: 0.5rem 0;
+  margin: 0.5rem 0 0 0;
   padding: 0.2rem 1rem;
   border-radius: $border-radius;
   background: var(--primary-button-background-color);
@@ -125,4 +125,93 @@ button {
 #status {
   font-weight: bold;
   margin-top: 2rem;
+}
+
+section {
+  padding: 1rem;
+  background: #00000008;
+  box-sizing: border-box;
+  border-radius: $border-radius;
+  margin-bottom: 1rem;
+}
+
+//*
+#colors-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+
+  .checkmark {
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    transition: $transition-time;
+
+    &::after {
+      content: '';
+      position: absolute;
+      transform: scale(0);
+      transition: $transition-time;
+    }
+  }
+
+  .color-wrapper {
+    display: block;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    height: 2rem;
+    width: 2rem;
+    margin: 0.5rem;
+
+    $icons: (
+      1: #e96d71,
+      2: #736efe,
+      3: #28c76f,
+      4: #bc78ec,
+      5: #c32bac,
+    );
+
+    @each $number, $color in $icons {
+      &:nth-child(#{$number}) .checkmark {
+        background: $color;
+      }
+    }
+
+    input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+
+      &:checked {
+        ~ .checkmark {
+          transform: scale(1.2);
+          &:after {
+            transform: scale(1);
+          }
+        }
+      }
+    }
+
+    .checkmark:after {
+      top: 0.55rem;
+      left: 0.55rem;
+      width: 1rem;
+      height: 1rem;
+      border-radius: 50%;
+      background: white;
+      transition: $transition-time;
+    }
+
+    &:hover {
+      input {
+        ~ .checkmark {
+          transform: scale(1.2);
+        }
+      }
+    }
+  }
 }

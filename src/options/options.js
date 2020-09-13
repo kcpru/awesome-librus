@@ -12,31 +12,35 @@ const save_options = () => {
     redirect = $('#redirect').prop('checked'),
     status = $('#status')
 
+  const color = $('.color:checked').val()
+
   storage.set(
     {
       borderRadius,
       theme,
       redirect,
       redirectPage,
+      color,
     },
     () => {
       status.text('Zapisano pomyślnie.')
       setTimeout(() => {
-        status.textContent = ''
-      }, 1000)
+        status.text('')
+      }, 2000)
     }
   )
 }
 
 const restore_options = () => {
   storage.get(
-    ['theme', 'borderRadius', 'redirect', 'redirectPage'],
+    ['theme', 'borderRadius', 'redirect', 'redirectPage', 'color'],
 
-    ({ theme, borderRadius, redirect, redirectPage }) => {
+    ({ theme, borderRadius, redirect, redirectPage, color }) => {
       $('#theme').val(theme)
       $('#border-radius').val(borderRadius)
       $('#redirect-page').val(redirectPage)
       $('#redirect').prop('checked', redirect)
+      $(`input[value=${color}]`).prop('checked', redirect)
     }
   )
 }

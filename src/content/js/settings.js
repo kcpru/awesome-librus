@@ -4,10 +4,14 @@ const settings = () => {
   const storage = API.storage.local
 
   const getStorage = () =>
-    storage.get(['theme', 'borderRadius'], ({ theme, borderRadius }) => {
-      body.classList = ''
-      body.classList.add(theme, `border-radius-${borderRadius}`)
-    })
+    storage.get(
+      ['theme', 'borderRadius', 'color'],
+      ({ theme, borderRadius, color }) => {
+        body.classList = ''
+        body.classList.add(`${theme}-${color}`, `border-radius-${borderRadius}`)
+        console.log(`${theme}-${color}`)
+      }
+    )
   getStorage()
 
   storage.onChanged.addListener(() => getStorage())
