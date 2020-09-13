@@ -46,8 +46,8 @@ $transition-time: 0.1s;
 }
 
 * {
-  font-family: 'Baloo Chettan 2';
-  font-size: 105%;
+  font-family: 'Montserrat';
+  // font-size: 105%;
 }
 
 body {
@@ -66,6 +66,10 @@ select {
   -webkit-appearance: none;
   display: block;
   width: 100%;
+
+  &:focus {
+    outline: none;
+  }
 }
 
 input[type='range'],
@@ -124,7 +128,7 @@ button {
 
 #status {
   font-weight: bold;
-  margin-top: 2rem;
+  margin-top: 0.5rem;
 }
 
 section {
@@ -197,8 +201,8 @@ section {
     }
 
     .checkmark:after {
-      top: 0.55rem;
-      left: 0.55rem;
+      top: 0.5rem;
+      left: 0.5rem;
       width: 1rem;
       height: 1rem;
       border-radius: 50%;
