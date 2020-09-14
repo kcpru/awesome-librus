@@ -7,6 +7,10 @@ const settings = () => {
     storage.get(
       ['theme', 'borderRadius', 'color'],
       ({ theme, borderRadius, color }) => {
+        theme = theme || 'light'
+        borderRadius = borderRadius || '4'
+        color = color || 'red'
+
         body.classList = ''
         body.classList.add(`${theme}-${color}`, `border-radius-${borderRadius}`)
         console.log(`${theme}-${color}`)

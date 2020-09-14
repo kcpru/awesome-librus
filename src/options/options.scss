@@ -38,7 +38,7 @@ button {
   box-sizing: border-box;
   margin: 0.5rem 0 0 0;
   padding: 0.2rem 1rem;
-  border-radius: $border-radius;
+  border-radius: var(--border-radius);
   background: var(--primary-button-background-color);
   color: var(--primary-button-text-color);
   transition: $transition-time;
@@ -57,7 +57,7 @@ button {
 
 .slider {
   -webkit-appearance: none;
-  border-radius: $border-radius;
+  border-radius: var(--border-radius);
   background: var(--primary-button-background-color);
   outline: none;
   transition: $transition-time;
@@ -67,14 +67,14 @@ button {
     appearance: none;
     width: 0.8rem;
     height: 0.8rem;
-    border-radius: $border-radius;
+    border-radius: var(--border-radius);
     background: var(--primary-button-text-color);
   }
 
   &::-moz-range-thumb {
     width: 0.8rem;
     height: 0.8rem;
-    border-radius: $border-radius;
+    border-radius: var(--border-radius);
     background: var(--primary-button-text-color);
   }
 
@@ -93,7 +93,7 @@ section {
   padding: 1rem;
   background: #00000008;
   box-sizing: border-box;
-  border-radius: $border-radius;
+  border-radius: var(--border-radius);
   margin-bottom: 1rem;
 }
 
@@ -107,7 +107,7 @@ section {
   .checkmark {
     height: 2rem;
     width: 2rem;
-    border-radius: 50%;
+    border-radius: var(--border-radius);
     transition: $transition-time;
 
     &::after {
@@ -163,7 +163,7 @@ section {
       left: 0.5rem;
       width: 1rem;
       height: 1rem;
-      border-radius: 50%;
+      border-radius: var(--border-radius);
       background: white;
       transition: $transition-time;
     }
