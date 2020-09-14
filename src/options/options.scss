@@ -1,49 +1,7 @@
-$border-radius: 1rem;
-$transition-time: 0.1s;
-
-@mixin theme(
-  $primary-color,
-  $primary-background-color,
-  $primary-text-color,
-  $secondary-background-color,
-  $shadow: true
-) {
-  --primary-color: #{$primary-color};
-  --primary-background-color: #{$primary-background-color};
-  --primary-text-color: #{$primary-text-color};
-
-  --secondary-background-color: #{$secondary-background-color};
-
-  // Button
-  --primary-button-background-color: #{$primary-color + '30'};
-  --primary-button-text-color: #{$primary-color};
-  --primary-button-background-color-hover: #{$primary-color};
-  --primary-button-text-color-hover: #{$primary-background-color};
-
-  --secondary-button-background-color: #{$secondary-background-color};
-  --secondary-button-text-color: #{$primary-text-color};
-  --secondary-button-background-color-hover: #{$primary-text-color};
-  --secondary-button-text-color-hover: #{$secondary-background-color};
-
-  // Box shadow
-  @if $shadow {
-    --primary-button-shadow: 0
-      0.2rem
-      1rem -0.4rem
-      var(--primary-button-background-color-hover);
-  } @else {
-    --primary-button-shadow: none;
-  }
-
-  // Other
-  --accent-1: #ea2a56;
-  --accent-2: #442643;
-  --accent-3: #f5a817;
-}
-
-.light {
-  @include theme(#e96d71, #ffffff, #1a242d, #e96d7120);
-}
+@import '../scss/utils/mixins';
+@import '../scss/utils/variables';
+@import '../scss/class/themes';
+@import '../scss/class/border-radius';
 
 * {
   font-family: 'Montserrat';

@@ -1,10 +1,10 @@
 //! HTML to CSS: https://htmltocss.github.io/
 
-@import 'utils/mixins';
-@import 'utils/variables';
+@import '../../scss/utils/mixins';
+@import '../../scss/utils/variables';
 
-@import 'options/themes';
-@import 'options/border-radius';
+@import '../../scss/class/themes';
+@import '../../scss/class/border-radius';
 
 @import 'base/global';
 @import 'base/pseudo';
