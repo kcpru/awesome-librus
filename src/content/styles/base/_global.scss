@@ -2,3 +2,17 @@
   font-family: 'Montserrat' !important;
   // color: var(--primary-text-color);
 }
+
+body {
+  background: var(--secondary-background-color) !important;
+}
+
+.MuiPaper-root {
+  background: var(--primary-background-color) !important;
+  border-radius: var(--border-radius) !important;
+  box-sizing: border-box !important;
+  // margin: 1rem;
+  * {
+    color: var(--primary-text-color);
+  }
+}

@@ -13,7 +13,7 @@
 }
 
 .light-blue {
-  @include theme(#736efe, #ffffff, #1a242d, #736efe20);
+  @include theme(#4da8f8, #ffffff, #1a242d, #736efe20);
 }
 
 .light-green {
@@ -28,6 +28,7 @@
   @include theme(#c32bac, #ffffff, #1a242d, #c32bac20);
 }
 
+// Dark
 .dark-red {
   @include theme(#f84d4d, #2d1a1a, #f6f3f3, #180e0e, false);
 }
@@ -45,13 +46,29 @@
 }
 
 .dark-pink {
-  @include theme(#f7f7f7, #222222, #f7f7f7, #161616, false);
+  @include theme(#c32bac, #222222, #f7f7f7, #161616, false);
 }
 
-// .amoled {
-//   @include theme(#b8b8b8, #181818, #eeeeee, #000000, false);
-// }
+// Black
+.black-red {
+  @include theme(#f84d4d, #000000, #eeeeee, #0f0f0f, false);
+}
 
+.black-violet {
+  @include theme(#d6aae0, #000000, #eeeeee, #0f0f0f, false);
+}
+
+.black-blue {
+  @include theme(#4da8f8, #000000, #eeeeee, #0f0f0f, false);
+}
+
+.black-green {
+  @include theme(#28c76f, #000000, #eeeeee, #0f0f0f, false);
+}
+
+.black-pink {
+  @include theme(#c32bac, #000000, #eeeeee, #000000, false);
+}
 // .mono {
 //   @include theme(
 //     #838383,

@@ -1,0 +1,30 @@
+.MuiListItem-root {
+  background: var(--primary-button-background-color) !important;
+  color: var(--primary-button-text-color) !important;
+  border-radius: var(--border-radius) !important;
+  transition: $transition-time;
+
+  &:hover {
+    @include hoverButton();
+  }
+
+  &.active {
+    @include hoverButton();
+
+    &:hover {
+      @include hoverButton();
+    }
+  }
+
+  div.MuiListItemIcon-root {
+    svg.MuiSvgIcon-root {
+      path {
+      }
+    }
+  }
+
+  div.MuiListItemText-root {
+    span.MuiTypography-root {
+    }
+  }
+}
