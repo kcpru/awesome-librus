@@ -2,7 +2,6 @@ const paths = require('./paths')
 const merge = require('webpack-merge')
 const common = require('./webpack.common.js')
 const ExtensionReloader = require('webpack-extension-reloader')
-const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 module.exports = merge(common, {
@@ -11,10 +10,6 @@ module.exports = merge(common, {
   devtool: 'cheap-module-source-map',
 
   plugins: [
-    new ExtractTextPlugin({
-      filename: '[name]/[name].css',
-      allChunks: true,
-    }),
     new CopyWebpackPlugin([
       {
         from: paths.static,
@@ -38,10 +33,7 @@ module.exports = merge(common, {
   ],
   module: {
     rules: [
-      {
-        test: /\.(scss|css)$/,
-        loader: ExtractTextPlugin.extract(['css-loader', 'sass-loader']),
-      },
+      
     ],
   },
 })

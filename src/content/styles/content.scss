@@ -1,22 +1,16 @@
 //! HTML to CSS: https://htmltocss.github.io/
 
-@import 'utils/mixins';
-@import 'utils/variables';
+@import '../../scss/utils/mixins';
+@import '../../scss/utils/variables';
 
-@import 'options/themes';
-@import 'options/border-radius';
+@import '../../scss/class/themes';
+@import '../../scss/class/border-radius';
 
 @import 'base/global';
 @import 'base/pseudo';
 
-@import 'layout/header';
-@import 'layout/footer';
-@import 'components/toggle-theme';
-
-@import 'pages/oceny';
-@import 'pages/frekfencja';
-@import 'pages/wiadomosci';
-@import 'pages/ogloszenia';
-@import 'pages/ustawienia';
-@import 'pages/terminarz';
-@import 'pages/zadania-domowe';
+@import 'components/footer';
+@import 'components/header';
+@import 'components/navigation';
+@import 'components/a';
+@import 'components/list';

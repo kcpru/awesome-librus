@@ -1,0 +1,42 @@
+.MuiListItem-root {
+  background: var(--primary-button-background-color) !important;
+  color: var(--primary-button-text-color) !important;
+  border-radius: var(--border-radius) !important;
+  transition: $transition-time;
+
+  &:hover {
+    @include hoverButton();
+
+    * {
+      color: var(--primary-button-text-color-hover) !important;
+    }
+  }
+
+  &.active {
+    @include hoverButton();
+
+    &:hover {
+      @include hoverButton();
+
+      * {
+        color: var(--primary-button-text-color-hover) !important;
+      }
+    }
+
+    * {
+      color: var(--primary-button-text-color-hover) !important;
+    }
+  }
+
+  div.MuiListItemIcon-root {
+    svg.MuiSvgIcon-root {
+      path {
+      }
+    }
+  }
+
+  div.MuiListItemText-root {
+    span.MuiTypography-root {
+    }
+  }
+}

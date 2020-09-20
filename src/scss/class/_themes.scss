@@ -1,0 +1,86 @@
+/*
+@include theme(
+  --primary-color,              -> color
+  --primary-background-color,   -> color
+  --primary-text-color,         -> color
+  --secondary-background-color, -> color
+  --primary-button-shadow       -> bool     (default: true)
+);
+*/
+
+.light-red {
+  @include theme(#e96d71, #ffffff, #1a242d, #e96d7120);
+}
+
+.light-blue {
+  @include theme(#4da8f8, #ffffff, #1a242d, #736efe20);
+}
+
+.light-green {
+  @include theme(#28c76f, #ffffff, #1a242d, #28c76f20);
+}
+
+.light-violet {
+  @include theme(#bc78ec, #ffffff, #1a242d, #bc78ec20);
+}
+
+.light-pink {
+  @include theme(#c32bac, #ffffff, #1a242d, #c32bac20);
+}
+
+// Dark
+.dark-red {
+  @include theme(#f84d4d, #2d1a1a, #f6f3f3, #180e0e, false);
+}
+
+.dark-violet {
+  @include theme(#d6aae0, #360940, #e4bfec, #1e0524, false);
+}
+
+.dark-blue {
+  @include theme(#4da8f8, #1a242d, #f3f4f6, #0e1318, false);
+}
+
+.dark-green {
+  @include theme(#28c76f, #18271f, #eef1f0, #0f1813, false);
+}
+
+.dark-pink {
+  @include theme(#c32bac, #222222, #f7f7f7, #161616, false);
+}
+
+// Black
+.black-red {
+  @include theme(#f84d4d, #000000, #eeeeee, #0f0f0f, false);
+}
+
+.black-violet {
+  @include theme(#d6aae0, #000000, #eeeeee, #0f0f0f, false);
+}
+
+.black-blue {
+  @include theme(#4da8f8, #000000, #eeeeee, #0f0f0f, false);
+}
+
+.black-green {
+  @include theme(#28c76f, #000000, #eeeeee, #0f0f0f, false);
+}
+
+.black-pink {
+  @include theme(#c32bac, #000000, #eeeeee, #000000, false);
+}
+// .mono {
+//   @include theme(
+//     #838383,
+//     #ffffff,
+//     #272727,
+//     #e6e6e6
+//   );
+
+//   span,
+//   p,
+//   img,
+//   a {
+//     filter: grayscale(100%);
+//   }
+// }

@@ -1,0 +1,23 @@
+.fc-list-heading {
+  &:first-child {
+    .fc-widget-header {
+      border-radius: var(--border-radius) var(--border-radius) 0 0 !important;
+    }
+  }
+  .fc-widget-header {
+    @include hoverButton();
+
+    span {
+      @include hoverButton();
+    }
+  }
+}
+
+.fc-list-item {
+  border: 1px solid var(--primary-color) !important;
+  border-top: none;
+}
+
+table {
+  border: none !important;
+}
