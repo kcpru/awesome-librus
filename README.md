@@ -45,6 +45,7 @@ You can view the deploy in `zip`.
 
 - Themes
 - Refreshed look
+- Automatic redirection to the selected page after logging in
 
 <img alt="screesnhot" src="screenshot.jpg">
 
