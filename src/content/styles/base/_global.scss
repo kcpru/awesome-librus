@@ -1,13 +1,10 @@
 * {
   font-family: 'Montserrat' !important;
-  // color: var(--primary-text-color);
+  color: var(--primary-text-color) !important;
 }
 
 body {
   background: var(--secondary-background-color) !important;
-  * {
-    color: var(--primary-text-color) !important;
-  }
 }
 
 .MuiPaper-root {

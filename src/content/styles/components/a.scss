@@ -6,6 +6,10 @@
 
   &:hover {
     @include hoverButton();
+
+    * {
+      color: var(--primary-button-text-color-hover) !important;
+    }
   }
 
   &.active {
@@ -13,6 +17,14 @@
 
     &:hover {
       @include hoverButton();
+
+      * {
+        color: var(--primary-button-text-color-hover) !important;
+      }
+    }
+
+    * {
+      color: var(--primary-button-text-color-hover) !important;
     }
   }
 

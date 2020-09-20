@@ -6,6 +6,10 @@
   }
   .fc-widget-header {
     @include hoverButton();
+
+    span {
+      @include hoverButton();
+    }
   }
 }
 
