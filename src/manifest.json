@@ -12,7 +12,7 @@
   },
   "content_scripts": [
     {
-      "matches": ["https://synergia.librus.pl/*"],
+      "matches": ["https://synergia.librus.pl/*", "https://wiadomosci.librus.pl/*"],
       "js": ["content.js"],
       "css": ["content.css"]
     }
