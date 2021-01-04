@@ -2,6 +2,7 @@
 
 Librus on steroids 💪🏼
 
+![Awesome Librus Gif](/awesome-librus.gif)
 ## Download
 
 [Download zip](https://github.com/kcpru/awesome-librus/raw/master/zip/awesome-librus.zip)
